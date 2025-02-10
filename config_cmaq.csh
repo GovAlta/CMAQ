@@ -1,6 +1,6 @@
 #!/bin/csh -f
 
-# ================= CMAQv5.5.X Configuration Script ================= #
+# ================= CMAQv5.4.X Configuration Script ================= #
 # Requirements: I/O API & netCDF libraries                            #
 #               PGI, Intel, or Gnu Fortran compiler                   #
 #               MPICH for multiprocessor computing                    #
@@ -12,25 +12,34 @@
 #             http://www.cmascenter.org/help-desk.cfm                 #
 # =================================================================== #
 
-#> Critical Folder Locations
+#> Critical Folder Locationss
  # CMAQ_HOME - this is where the config_cmaq.csh script is located. It
  # is also the root directory for all the executables. It may include 
  # the repository if the user is building CMAQ inside the repository. It
  # may, on the other hand, be outside the repository if the user has 
  # created a separate project directory where they wish to put build-
  # and run-scripts as well as executables.
- setenv CMAQ_HOME $cwd
-
+ #
+ #setenv CMAQ_HOME $cwd
+#  Lyder and Petty changed CMAQ_HOME to fixed directory
+setenv CMAQ_HOME /data/CMAQ_5.5
+setenv BUILD $CMAQ_HOME/CCTM/builds
  # CMAQ_REPO - this is always the location of the CMAQ repository that
- # the user will pull from to create executables. If the user is building
+ # the user will pull from to create exectuables. If the user is building
  # CMAQ inside the repository then it will be equal to CMAQ_HOME. If not,
  # the user must supply an alternative folder locaiton.
- setenv CMAQ_REPO $CMAQ_HOME
+
+setenv CMAQ_REPO $BUILD/BLD_CCTM_v55_standard_gcc_cb6r5_ae7_aq_m3dry_debug
+
+ # Petty and Lyder changed to CMAQ_HOME
+ #setenv CMAQ_REPO $CMAQ_HOME
 
  # CMAQ_DATA - this may be where the input data are located. It may be a 
  # symbolic link to another location on the system, but it should be
  # provided here 
- setenv CMAQ_DATA $CMAQ_HOME/data
+setenv CMAQ_DATA $CMAQ_HOME/data
+#Lyder and Petty changed the directory name to remove for as it seems to be protected
+#setenv CMAQ_DATA /data
  if ( ! -d $CMAQ_DATA ) mkdir -p $CMAQ_DATA
 
  cd $CMAQ_HOME
@@ -73,6 +82,7 @@
  echo "Compiler is set to $compiler"
 
 
+
 #> Compiler flags and settings
  switch ( $compiler )
 
@@ -106,7 +116,7 @@
         setenv myCFLAGS "-O2"
         setenv extra_lib ""
     
-        breaksw
+        break
     
 #>  Portland Group fortran compiler.............................................
     case pgi:
@@ -148,25 +158,25 @@
         setenv WRF_ARCH # [1-75]   
   
         #> I/O API, netCDF, and MPI Library Locations -- used in CMAQ
-        setenv IOAPI_INCL_DIR   ioapi_inc_gcc             #> I/O API include header files
-        setenv IOAPI_LIB_DIR    ioapi_lib_gcc             #> I/O API libraries
-        setenv NETCDF_LIB_DIR   netcdf_lib_gcc            #> netCDF C directory path
-        setenv NETCDF_INCL_DIR  netcdf_inc_gcc            #> netCDF C directory path
-        setenv NETCDFF_LIB_DIR  netcdff_lib_gcc           #> netCDF Fortran directory path
-        setenv NETCDFF_INCL_DIR netcdff_inc_gcc           #> netCDF Fortran directory path
-        setenv MPI_INCL_DIR     mpi_incl_gcc              #> MPI Include directory path
-        setenv MPI_LIB_DIR      mpi_lib_gcc               #> MPI Lib directory path
+        setenv IOAPI_INCL_DIR   /shared/build/ioapi-3.2/ioapi/fixed_src         #> I/O API include header files
+        setenv IOAPI_LIB_DIR    /shared/build/ioapi-3.2/Linux2_x86_64gfort             #> I/O API libraries
+        setenv NETCDF_LIB_DIR   /shared/build/netcdf/lib            #> netCDF C directory path
+        setenv NETCDF_INCL_DIR  /shared/build/netcdf/include            #> netCDF C directory path
+        setenv NETCDFF_LIB_DIR  /shared/build/netcdf/lib           #> netCDF Fortran directory path
+        setenv NETCDFF_INCL_DIR /shared/build/netcdf/include          #> netCDF Fortran directory path
+        setenv MPI_INCL_DIR     /usr/include/openmpi-x86_64              #> MPI Include directory path
+        setenv MPI_LIB_DIR      /usr/lib64/openmpi/lib               #> MPI Lib directory path
 
         #> Compiler Aliases and Flags
         #> set the compiler flag -fopt-info-missed to generate a missed optimization report in the bldit logfile
-        setenv myFC mpifort
+        setenv myFC /usr/lib64/openmpi/bin/mpifort
         setenv myCC gcc
         setenv myFSTD "-O3 -funroll-loops -finit-character=32 -Wtabs -Wsurprising -ftree-vectorize -ftree-loop-if-convert -finline-limit=512"
         setenv myDBG  "-Wall -O0 -g -fcheck=all -ffpe-trap=invalid,zero,overflow -fbacktrace"
-        setenv myFFLAGS "-ffixed-form -ffixed-line-length-132 -funroll-loops -finit-character=32 -std=legacy"
+        setenv myFFLAGS "-ffixed-form -ffixed-line-length-132 -funroll-loops -finit-character=32"
         setenv myFRFLAGS "-ffree-form -ffree-line-length-none -funroll-loops -finit-character=32"
         setenv myCFLAGS "-O2"
-        setenv myLINK_FLAG # "-fopenmp" openMP not supported w/ CMAQ
+        setenv myLINK_FLAG  "-fopenmp" # openMP not supported w/ CMAQ
         setenv extra_lib ""
     
         breaksw
@@ -181,7 +191,7 @@
 #> Apply Specific Module and Library Location Settings for those working inside EPA
  # source /work/MOD3DEV/cmaq_common/cmaq_env.csh  #>>> UNCOMMENT if at EPA
 
-#> Add the Compiler Version Number to the Compiler String if it's not empty
+#> Add The Complier Version Number to the Compiler String if it's not empty
  setenv compilerString ${compiler}
  if ( $compilerVrsn != "Empty" ) then
     setenv compilerString ${compiler}${compilerVrsn}
@@ -210,6 +220,7 @@
  setenv IOAPI_DIR   $CMAQ_LIB/ioapi
 
 #> Create Symbolic Links to Libraries
+
  if ( ! -d $CMAQ_LIB ) mkdir -p $CMAQ_LIB
  if (   -e $MPI_DIR  ) rm -rf $MPI_DIR
      mkdir $MPI_DIR
@@ -226,6 +237,9 @@
     ln -sfn $IOAPI_INCL_DIR $IOAPI_DIR/include_files
     ln -sfn $IOAPI_LIB_DIR  $IOAPI_DIR/lib
  endif
+
+#Marking where this block ends
+echo "________STOP 1_________"
 
 #> Check for netcdf and I/O API libs/includes, error if they don't exist
  if ( ! -e $NETCDF_DIR/lib/libnetcdf.a ) then 
