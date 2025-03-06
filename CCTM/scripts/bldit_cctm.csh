@@ -65,11 +65,11 @@ set CopySrc                            #> copy the source files into the build d
                                        #>   will be overwritten.
 set ParOpt                             #> uncomment to build a multiple processor (MPI) executable; 
                                        #>   comment out for a single processor (serial) executable
-#set DistrEnv                          #> uncomment to distribute environmental variables to multiple machines
+set DistrEnv                          #> uncomment to distribute environmental variables to multiple machines
                                        #>   comment out for a single processor (serial) executable (MPI only)
 #set build_parallel_io                 #> uncomment to build with parallel I/O (pnetcdf); 
                                        #>   comment out to use standard netCDF I/O
-#set Debug_CCTM                        #> uncomment to compile CCTM with debug option equal to TRUE
+set Debug_CCTM                        #> uncomment to compile CCTM with debug option equal to TRUE
                                        #>   comment out to use standard, optimized compile process
 set make_options = "-j"                #> additional options for make command if MakeFileOnly is not set
                                        #>   comment out if no additional options are wanted.
@@ -78,7 +78,7 @@ set make_options = "-j"                #> additional options for make command if
 #set ISAM_CCTM                         #> uncomment to compile CCTM with ISAM activated
                                        #>   comment out to use standard process
 
-#set DDM3D_CCTM                        #> uncomment to compile CCTM with DDM-3D activated
+set DDM3D_CCTM                        #> uncomment to compile CCTM with DDM-3D activated
                                        #>   comment out to use standard process
 #> Two-way WRF-CMAQ 
 #set build_twoway                      #> uncomment to build WRF-CMAQ twoway; 
@@ -111,7 +111,7 @@ set make_options = "-j"                #> additional options for make command if
  set ModGrid   = grid/cartesian             #> grid configuration module 
  
  set DepMod    = m3dry                      #> m3dry or stage
-#set DepMod    = stage
+# set DepMod    = stage
  set ModAdv    = wrf_cons                   #> 3-D Advection Scheme [Options: wrf_cons (default), local_cons]
  set ModHdiff  = hdiff/multiscale           #> horizontal diffusion module
  set ModVdiff  = vdiff/acm2_${DepMod}       #> vertical diffusion module (see $CMAQ_MODEL/CCTM/src/vdiff)
@@ -345,12 +345,18 @@ set make_options = "-j"                #> additional options for make command if
 
 #> Set and create the "BLD" directory for checking out and compiling 
 #> source code. Move current directory to that build directory.
- if ( $?Debug_CCTM ) then
-     set Bld = $CMAQ_HOME/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}_${Mechanism}_${DepMod}_debug
- else
-     set Bld = $CMAQ_HOME/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}_${Mechanism}_${DepMod}
- endif
+ #if ( $?Debug_CCTM ) then
+ #    set Bld = $CMAQ_HOME/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}_${Mechanism}_${DepMod}_debug
+ #else
+ #    set Bld = $CMAQ_HOME/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}_${Mechanism}_${DepMod}
+ #endif
 
+#> source code. Move current directory to that build directory. Lyder and Petty changed to a 'build' directory
+ if ( $?Debug_CCTM ) then
+     set Bld = $CMAQ_HOME/CCTM/builds/BLD_CCTM_${VRSN}_${compilerString}_${Mechanism}_${DepMod}_debug
+ else
+     set Bld = $CMAQ_HOME/CCTM/builds/BLD_CCTM_${VRSN}_${compilerString}_${Mechanism}_${DepMod}
+ endif
 
  if ( ! -e "$Bld" ) then
     mkdir $Bld

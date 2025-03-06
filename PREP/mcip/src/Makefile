@@ -35,26 +35,28 @@ MODEL = mcip.exe
 ###	 -L$(NETCDF)/lib -lnetcdff -lnetcdf
 
 #...gfortran
-###FC	= gfortran
-###NETCDF = /usr/local/apps/netcdf-4.9.2/gcc-8.5
-###IOAPI_ROOT = /usr/local/apps/ioapi-3.2/gcc-8.5
-###FFLAGS	= -O3 -I$(NETCDF)/include -I$(IOAPI_ROOT)/Linux2_x86_64
-###FFLAGS	= -g -O0  \
-###          -ffpe-trap='invalid','zero','overflow','underflow'  \
-###          -I$(NETCDF)/include -I$(IOAPI_ROOT)/Linux2_x86_64
-###LIBS    = -L$(IOAPI_ROOT)/Linux2_x86_64 -lioapi  \
-###          -L$(NETCDF)/lib -lnetcdff -lnetcdf
+FC	= gfortran
+#NETCDF = /shared/build/netcdf-4.9.2/gcc-8.5
+NETCDF = /shared/build/netcdf
+#IOAPI_ROOT = /usr/local/apps/ioapi-3.2/gcc-8.5
+IOAPI_ROOT = /shared/build/ioapi-3.2
+#FFLAGS	= -O3 -I$(NETCDF)/lib64/gfortran/modules -I$(IOAPI_ROOT)/Linux2_x86_64gfort
+FFLAGS	= -g -O0 -fno-underscoring \
+         -ffpe-trap='invalid','zero','overflow','underflow'  \
+         -I$(NETCDF)/lib -I$(IOAPI_ROOT)/Linux2_x86_64gfort
+LIBS    = -L$(IOAPI_ROOT)/Linux2_x86_64gfort -lioapi  \
+         -L$(NETCDF)/lib  -lnetcdf #-lnetcdff : removed as we don't have lnetcdff library
 
 #...Intel Fortran
-FC      = ifort
-NETCDF = /usr/local/apps/netcdf-4.9.2/intel-21.4
-IOAPI_ROOT = /usr/local/apps/ioapi-3.2/intel-21.4
+#FC      = ifort
+#NETCDF = /usr/local/apps/netcdf-4.9.2/intel-21.4
+#IOAPI_ROOT = /usr/local/apps/ioapi-3.2/intel-21.4
 ###FFLAGS  = -g -O0 -check all -C -traceback -FR -I$(NETCDF)/include  \
 ###          -I$(IOAPI_ROOT)/Linux2_x86_64ifort
-FFLAGS  = -O3 -traceback -FR -I$(NETCDF)/include  \
-	  -I$(IOAPI_ROOT)/Linux2_x86_64ifort
-LIBS    = -L$(IOAPI_ROOT)/lib -lioapi \
-	  -L$(NETCDF)/lib -lnetcdff -lnetcdf
+#FFLAGS  = -O3 -traceback -FR -I$(NETCDF)/include  \
+#	  -I$(IOAPI_ROOT)/Linux2_x86_64ifort
+#LIBS    = -L$(IOAPI_ROOT)/lib -lioapi \
+#	  -L$(NETCDF)/lib -lnetcdff -lnetcdf
 
 DEFS   = 
 
@@ -158,7 +160,7 @@ all:
 $(MODEL): $(OBJS)
 	$(FC) -o $(MODEL) $(FFLAGS) $(OBJS) $(MODULES) $(LIBS)
 
-$(OBJS): $(MODULES)
+$(OBJS): $(MODULES) 
 
 .f90.o:
 	$(FC) $(FFLAGS) $(INCLUDES) -c $<
