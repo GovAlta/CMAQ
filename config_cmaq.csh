@@ -22,14 +22,14 @@
  #
  #setenv CMAQ_HOME $cwd
 #  Lyder and Petty changed CMAQ_HOME to fixed directory
-setenv CMAQ_HOME /data/CMAQ_5.5
-setenv BUILD $CMAQ_HOME/CCTM/builds
+ setenv CMAQ_HOME /data/CMAQ_5.5/CMAQ
+ setenv BUILD /shared/build
  # CMAQ_REPO - this is always the location of the CMAQ repository that
  # the user will pull from to create exectuables. If the user is building
  # CMAQ inside the repository then it will be equal to CMAQ_HOME. If not,
  # the user must supply an alternative folder locaiton.
 
-setenv CMAQ_REPO $BUILD/BLD_CCTM_v55_standard_gcc_cb6r5_ae7_aq_m3dry_debug
+setenv CMAQ_REPO /data/CMAQ_REPO
 
  # Petty and Lyder changed to CMAQ_HOME
  #setenv CMAQ_REPO $CMAQ_HOME
@@ -37,9 +37,9 @@ setenv CMAQ_REPO $BUILD/BLD_CCTM_v55_standard_gcc_cb6r5_ae7_aq_m3dry_debug
  # CMAQ_DATA - this may be where the input data are located. It may be a 
  # symbolic link to another location on the system, but it should be
  # provided here 
-setenv CMAQ_DATA $CMAQ_HOME/data
+# setenv CMAQ_DATA $CMAQ_HOME/data
 #Lyder and Petty changed the directory name to remove for as it seems to be protected
-#setenv CMAQ_DATA /data
+setenv CMAQ_DATA /data/CMAQ_5.5/CMAQ/data
  if ( ! -d $CMAQ_DATA ) mkdir -p $CMAQ_DATA
 
  cd $CMAQ_HOME
@@ -158,12 +158,12 @@ setenv CMAQ_DATA $CMAQ_HOME/data
         setenv WRF_ARCH # [1-75]   
   
         #> I/O API, netCDF, and MPI Library Locations -- used in CMAQ
-        setenv IOAPI_INCL_DIR   /shared/build/ioapi-3.2/ioapi/fixed_src         #> I/O API include header files
-        setenv IOAPI_LIB_DIR    /shared/build/ioapi-3.2/Linux2_x86_64gfort             #> I/O API libraries
-        setenv NETCDF_LIB_DIR   /shared/build/netcdf/lib            #> netCDF C directory path
-        setenv NETCDF_INCL_DIR  /shared/build/netcdf/include            #> netCDF C directory path
-        setenv NETCDFF_LIB_DIR  /shared/build/netcdf/lib           #> netCDF Fortran directory path
-        setenv NETCDFF_INCL_DIR /shared/build/netcdf/include          #> netCDF Fortran directory path
+        setenv IOAPI_INCL_DIR   $BUILD/ioapi-3.2/ioapi/fixed_src             #> I/O API include header files
+        setenv IOAPI_LIB_DIR     $BUILD/ioapi-3.2/Linux2_x86_64gfort             #> I/O API libraries
+        setenv NETCDF_LIB_DIR   $BUILD/netcdf/lib            #> netCDF C directory path
+        setenv NETCDF_INCL_DIR  $BUILD/netcdf/include            #> netCDF C directory path
+        setenv NETCDFF_LIB_DIR  $BUILD/netcdf/lib           #> netCDF Fortran directory path
+        setenv NETCDFF_INCL_DIR $BUILD/netcdf/include          #> netCDF Fortran directory path
         setenv MPI_INCL_DIR     /usr/include/openmpi-x86_64              #> MPI Include directory path
         setenv MPI_LIB_DIR      /usr/lib64/openmpi/lib               #> MPI Lib directory path
 
