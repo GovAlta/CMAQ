@@ -56,7 +56,7 @@ set BLD       = ${CMAQ_HOME}/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}
 #> Set Working, Input, and Output Directories
  setenv WORKDIR ${CMAQ_HOME}/CCTM/scripts          #> Working Directory. Where the runscript is.
  setenv OUTDIR  ${CMAQ_DATA}/output_CCTM_${RUNID}_useps  #> Output Directory
- setenv INPDIR  ${CMAQ_DATA}/CMAQv5.4_2018_12NE3_Benchmark_2Day_Input/2018_12NE3            #> Input Directory
+ setenv INPDIR  ${CMAQ_DATA}/2018_12NE3            #> Input Directory
  setenv LOGDIR  ${OUTDIR}/LOGS     #> Log Directory Location
  setenv NMLpath ${BLD}             #> Location of Namelists. Common places are: 
                                    #>   ${WORKDIR} | ${CCTM_SRC}/MECHS/${MECH} | ${BLD}
@@ -79,7 +79,7 @@ set BLD       = ${CMAQ_HOME}/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}
 
 #> Set Timestepping Parameters
 set STTIME     = 000000            #> beginning GMT time (HHMMSS)
-set NSTEPS     = 240000            #> time duration (HHMMSS) for this run
+set NSTEPS     = 240000            #> time duration (HHMMSS) for this run 
 set TSTEP      = 010000            #> output time step interval (HHMMSS)
 
 #> Horizontal domain decomposition
