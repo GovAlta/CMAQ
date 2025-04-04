@@ -34,6 +34,7 @@ echo 'Start Model Run At ' `date`
 
 #> Set General Parameters for Configuring the Simulation
  set VRSN      = v55_DDM3D              #> Code Version
+ set VRSN      = v55              #> Code VersionBLD_CCTM_v55_gcc_m3dry
 # set VRSN      = v54
  set PROC      = mpi               #> serial or mpi
  set MECH      = cb6r5_ae7_aq      #> Mechanism ID
@@ -47,7 +48,7 @@ echo 'Start Model Run At ' `date`
 
 #> Set the build directory (this is where the CMAQ executable
 #> is located by default).
- set BLD       = ${CMAQ_HOME}/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}
+ set BLD       = ${CMAQ_HOME}/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}_m3dry
  set EXEC      = CCTM_${VRSN}.exe  
 echo ${VRSN}_${compilerString}
 #> Output Each line of Runscript to Log File
@@ -56,7 +57,7 @@ echo ${VRSN}_${compilerString}
 #> Set Working, Input, and Output Directories
  setenv WORKDIR ${CMAQ_HOME}/CCTM/scripts          #> Working Directory. Where the runscript is.
  setenv CMAQ_DATA $CMAQ_HOME/data/MACS_test_1Day_data
- setenv OUTDIR  ${CMAQ_DATA}/output_CCTM_${RUNID}_DDM2  #> Output Directory
+ setenv OUTDIR  ${CMAQ_DATA}/output_CCTM_${RUNID}_NDDM2  #> Output Directory
  setenv INPDIR  ${CMAQ_DATA}            #> Input Directory
  setenv LOGDIR  ${OUTDIR}/LOGS     #> Log Directory Location
  setenv NMLpath ${BLD}             #> Location of Namelists. Common places are: 
