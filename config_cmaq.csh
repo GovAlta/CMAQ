@@ -29,11 +29,11 @@
  # CMAQ inside the repository then it will be equal to CMAQ_HOME. If not,
  # the user must supply an alternative folder locaiton.
 
-setenv CMAQ_REPO /data/CMAQ_REPO
+#setenv CMAQ_REPO /data/CMAQ_REPO
+#Set to CMAQ_HOME - tested and works:
+setenv CMAQ_REPO $CMAQ_HOME
 
- # Petty and Lyder changed to CMAQ_HOME
- #setenv CMAQ_REPO $CMAQ_HOME
-
+ 
  # CMAQ_DATA - this may be where the input data are located. It may be a 
  # symbolic link to another location on the system, but it should be
  # provided here 
