@@ -33,7 +33,7 @@ echo 'Start Model Run At ' `date`
  cd CCTM/scripts
 
 #> Set General Parameters for Configuring the Simulation
- set VRSN      = v55_DDM3D              #> Code Version
+ #set VRSN      = v55_DDM3D              #> Code Version if DDM is on
  set VRSN      = v55              #> Code VersionBLD_CCTM_v55_gcc_m3dry
 # set VRSN      = v54
  set PROC      = mpi               #> serial or mpi
@@ -44,20 +44,20 @@ echo 'Start Model Run At ' `date`
 #> Define RUNID as any combination of parameters above or others. By default,
 #> this information will be collected into this one string, $RUNID, for easy
 #> referencing in output binaries and log files as well as in other scripts.
- setenv RUNID  ${VRSN}_${compilerString}_${APPL}
+ setenv RUNID  v55_${compilerString}_${APPL}
 
 #> Set the build directory (this is where the CMAQ executable
 #> is located by default).
- set BLD       = ${CMAQ_HOME}/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}_m3dry
- set EXEC      = CCTM_${VRSN}.exe  
-echo ${VRSN}_${compilerString}
+ set BLD       = ${CMAQ_HOME}/CCTM/scripts/BLD_CCTM_v55_${compilerString}_m3dry
+ set EXEC      = CCTM_v55.exe  
+echo v55_${compilerString}
 #> Output Each line of Runscript to Log File
  if ( $CTM_DIAG_LVL != 0 ) set echo 
 
 #> Set Working, Input, and Output Directories
  setenv WORKDIR ${CMAQ_HOME}/CCTM/scripts          #> Working Directory. Where the runscript is.
  setenv CMAQ_DATA $CMAQ_HOME/data/MACS_test_1Day_data
- setenv OUTDIR  ${CMAQ_DATA}/output_CCTM_${RUNID}_NDDM2  #> Output Directory
+ setenv OUTDIR  ${CMAQ_DATA}/output_CCTM_${RUNID}  #> Output Directory
  setenv INPDIR  ${CMAQ_DATA}            #> Input Directory
  setenv LOGDIR  ${OUTDIR}/LOGS     #> Log Directory Location
  setenv NMLpath ${BLD}             #> Location of Namelists. Common places are: 
@@ -94,17 +94,17 @@ else
 endif
 
 #> Define Execution ID: e.g. [CMAQ-Version-Info]_[User]_[Date]_[Time]
-if ( ! -e ${BLD}/CCTM_${VRSN}.cfg ) then
+if ( ! -e ${BLD}/CCTM_v55.cfg ) then
    set SHAID = ""
 else
-   set SHAID = `grep "sha_ID" ${BLD}/CCTM_${VRSN}.cfg | cut -c 13-22`
+   set SHAID = `grep "sha_ID" ${BLD}/CCTM_v55.cfg | cut -c 13-22`
    if ( $SHAID == not_a_repo ) then
      set SHAID = ""
    else
      set SHAID = "_sha="$SHAID
    endif
 endif
-setenv EXECUTION_ID "CMAQ_CCTM${VRSN}${SHAID}_`id -u -n`_`date -u +%Y%m%d_%H%M%S_%N`"    #> Inform IO/API of the Execution ID
+setenv EXECUTION_ID "CMAQ_CCTMv55${SHAID}_`id -u -n`_`date -u +%Y%m%d_%H%M%S_%N`"    #> Inform IO/API of the Execution ID
 echo ""
 echo "---CMAQ EXECUTION ID: $EXECUTION_ID ---"
 
@@ -279,7 +279,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   
   #> Copy Model Configuration To Output Folder
   if ( ! -d "$OUTDIR" ) mkdir -p $OUTDIR
-  cp $BLD/CCTM_${VRSN}.cfg $OUTDIR/CCTM_${CTM_APPL}.cfg
+  cp $BLD/CCTM_v55.cfg $OUTDIR/CCTM_${CTM_APPL}.cfg
 
 # =====================================================================
 #> Input Files (Some are Day-Dependent)
