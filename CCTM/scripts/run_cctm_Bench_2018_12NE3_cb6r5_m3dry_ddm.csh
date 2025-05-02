@@ -29,7 +29,7 @@ echo 'Start Model Run At ' `date`
 
 #> Source the config.cmaq file to set the build environment
  cd ../..
- source ./config_cmaq.csh $compiler $compilerVrsn
+ source ./config_cmaq_remote_storage.csh $compiler $compilerVrsn
  cd CCTM/scripts
 
 #> Set General Parameters for Configuring the Simulation
