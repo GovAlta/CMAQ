@@ -29,6 +29,7 @@ C                           MY_N clauses, with new re-structure of LUS_DEFN,
 C                           most of the data declaration has been moved to 
 C                           lus_data_module (model_data_module.f)
 C    3 Mar 2022: J. Willison - Remove ctm_wbdust_beld option
+C   20 Oct 2024: W. Xu - Added code to handle USGS28 land use category (changes noted by wx, where appropriate)
 
       implicit none
 
@@ -87,6 +88,8 @@ C Includes:
          mminlu = mminlu_in
          if (mminlu .eq. 'USGS') then
             num_land_cat = 24
+         else if (mminlu .eq. 'USGS28') then !wx
+            num_land_cat = 28
          else if (mminlu .eq. 'NLCD40') then
             num_land_cat = size(landusef_in,1)
          end if
@@ -137,6 +140,47 @@ C           forest surrounding
      &                        + lut( c,r,21 )  ! Wooded Tundra
             end do
             end do
+
+            case( 'USGS28' )  !wx
+            do r = 1, nrows
+            do c = 1, ncols
+C           water & barren surrounding
+               uland( c,r,1 ) = lut( c,r,8 )   ! Shrubland
+     &                        + lut( c,r,16 )  ! Water
+     &                        + lut( c,r,19 )  ! Barren or Sparsely Vegetated
+     &                        + lut( c,r,22 )  ! Mixed Tundra
+     &                        + lut( c,r,23 )  ! Bare Ground Tundra
+     &                        + lut( c,r,24 )  ! Snow and Ice
+C     &                        + lut( c,r,25 )  ! Unassgined
+C     &                        + lut( c,r,26 )  ! Unassgined
+C     &                        + lut( c,r,27 )  ! Unassgined
+     &                        + lut( c,r,28 )  ! Water
+C           grass & crop surrounding
+               uland( c,r,2 ) = lut( c,r,2 )   ! Dryland Cropland and Pasture
+     &                        + lut( c,r,3 )   ! Irrigated Cropland and Pasture
+     &                        + lut( c,r,4 )   ! Mixed Dryland and Irrigated Cropland and Pasture
+     &                        + lut( c,r,5 )   ! Cropland-Grassland Mosaic
+     &                        + lut( c,r,6 )   ! Cropland-Woodland Mosaic
+     &                        + lut( c,r,7 )   ! Grassland
+     &                        + lut( c,r,9 )   ! Mixed Shrubland-Grassland
+     &                        + lut( c,r,10 )  ! Savannah
+     &                        + lut( c,r,17 )  ! Herbaceous Wetland
+     &                        + lut( c,r,20 )  ! Herbaceous Tundra
+
+C           building surrounding
+               uland( c,r,3 ) = lut( c,r,1 )   ! Urban Land
+
+C           forest surrounding
+               uland( c,r,4 ) = lut( c,r,11 )  ! Deciduous Broadleaf Forest
+     &                        + lut( c,r,12 )  ! Deciduous Needleleaf Forest
+     &                        + lut( c,r,13 )  ! Evergreen Broadleaf Forest
+     &                        + lut( c,r,14 )  ! Evergreen Needleleaf Forest
+     &                        + lut( c,r,15 )  ! Mixed Forest
+     &                        + lut( c,r,18 )  ! Wooded Wetland
+     &                        + lut( c,r,21 )  ! Wooded Tundra
+            end do
+            end do
+
 
 !           case( 'MODIS' )
 !           do r = 1, nrows
@@ -308,3 +352,4 @@ C           forest surrounding
          end function lus_init
 
       end module lus_defn
+

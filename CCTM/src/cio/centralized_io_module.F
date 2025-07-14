@@ -85,6 +85,7 @@
 !  03/31/22, J. Willison: Removed wb_dust_setup and modified lus_setup to remove
 !                         BELD as an option for desert land information.  
 !  04/12/22, G. Sarwar: Revised to include "DMS" into cb6r5_ae7_aq 
+!  20/10/24, W. Xu: Added code to handle USGS28 land use category (changes noted by wx, where appropriate)
 !------------------------------------------------------------------------!
 
 !------------------------------------------------------------------------!
@@ -672,6 +673,10 @@
                 IF ( INDEX( VDESC3D( v ), 'USGS24' ) .NE. 0 ) THEN
                    LAND_SCHEME = 'USGS24'
                    cio_dust_land_scheme = 'USGS24'
+!wx
+                ELSE IF ( INDEX( VDESC3D( v ), 'USGS28' ) .NE. 0 ) THEN
+                   LAND_SCHEME = 'USGS28'
+                   cio_dust_land_scheme = 'USGS28'
                 ELSE IF ( INDEX( VDESC3D( v ), 'NLCD40' ) .NE. 0 ) THEN
                    LAND_SCHEME = 'NLCD40'
                    cio_dust_land_scheme = 'NLCD40'
@@ -3210,6 +3215,14 @@ C   mminlu and num_land_cat are WRF global variables
                    call m3exit ( pname, stdate, sttime, xmsg, xstat1 )
                 end if
                 dust_land_scheme = 'USGS24'
+!wx
+             case( 'USGS28' )
+                if ( num_land_cat .ne. 28 ) then
+                   write( xmsg, '(a, i3, a )' ) strg, num_land_cat,
+     &                                    ' for ' // trim( mminlu )
+                   call m3exit ( pname, stdate, sttime, xmsg, xstat1 )
+                end if
+                dust_land_scheme = 'USGS28'
              case( 'NLCD40' )
                 if ( num_land_cat .ne. 40 ) then
                    write( xmsg, '(a, i3, a )' ) strg, num_land_cat,
@@ -3263,6 +3276,24 @@ C   mminlu and num_land_cat are WRF global variables
                 vnmld = vnmld_usgs24   ! array assignment
                 dmsk = dmsk_usgs24     ! array assignment
                 dmap = dmap_usgs24     ! array assignment
+
+!wx
+             case( 'USGS28' )           ! If USGS28
+                n_lucat = n_lucat_usgs28
+                n_dlcat = n_dlcat_usgs28
+                allocate( vnmlu( n_lucat ),
+     &                    vnmld( n_dlcat ),
+     &                    dmsk( n_dlcat ),
+     &                    dmap( n_dlcat+1 ), stat = err )
+                if ( err .ne. 0 ) then
+                   xmsg = '*** Error allocating vnmlu, vnmld, dmsk or dmap'
+                   call m3exit ( pname, stdate, sttime, xmsg, xstat1 )
+                end if
+                vnmlu = vnmlu_usgs28   ! array assignment
+                vnmld = vnmld_usgs28   ! array assignment
+                dmsk = dmsk_usgs28     ! array assignment
+                dmap = dmap_usgs28     ! array assignment
+
 
              case( 'MODIS' )            ! If MODIS
                 n_lucat = n_lucat_modis
@@ -7142,4 +7173,5 @@ C Read the various categories of normalized emissions
 #endif
 
       END MODULE CENTRALIZED_IO_MODULE
+
 

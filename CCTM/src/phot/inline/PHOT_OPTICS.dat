@@ -554,6 +554,36 @@ INDEX_OCEAN_WATER  =   17
  22 Mixed Tundra                                                  18     1.000
  23 Bare Ground Tundra                                            18     1.000
  24 Snow or Ice                                                   15     1.000
+         NUMB_USGS =   28
+! I,          LANDUSE_USGS28,          INDEX_ALBREF,            FAC_ALBREF,
+  1 Urban Land                                                    13     1.000
+  2 Dryland Cropland and Pasture                                  12     1.000
+  3 Irrigated Cropland and Pasture                                12     1.059
+  4 Mixed Dryland and Irrigated Cropland and Pasture              12     1.059
+  5 Cropland-Grassland Mosaic                                     14     1.000
+  6 Cropland-Woodland Mosaic                                      14     0.889
+  7 Grassland                                                     10     1.000
+  8 Shrubland                                                      7     1.000
+  9 Mixed Shrubland-Grassland                                      7     1.000
+ 10 Savannah                                                       9     1.000
+ 11 Deciduous Broadleaf Forest                                     4     1.000
+ 12 Deciduous Needleleaf Forest                                    3     1.000
+ 13 Evergreen Broadleaf Forest                                     2     1.000
+ 14 Evergreen Needleleaf Forest                                    1     1.000
+ 15 Mixed Forest                                                   5     1.000
+ 16 Water                                                         17     1.000
+ 17 Herbaceous Wetland                                            11     1.000
+ 18 Wooded Wetland                                                11     1.000
+ 19 Barren or Sparsely Vegetated                                  16     1.000
+ 20 Herbaceous Tundra                                             18     1.000
+ 21 Wooded Tundra                                                 18     1.000
+ 22 Mixed Tundra                                                  18     1.000
+ 23 Bare Ground Tundra                                            18     1.000
+ 24 Snow or Ice                                                   15     1.000
+ 25 ~~~unassigned~~~                                              -1     0.000
+ 26 ~~~unassigned~~~                                              -1     0.000
+ 27 ~~~unassigned~~~                                              -1     0.000
+ 28 Water                                                         17     1.000
    NUMB_MODIS_NOAH =   33
 ! I,    LANDUSE_MODIS-NOAH,          INDEX_ALBREF,            FAC_ALBREF, 
   1 Evergreen Needleleaf Forest                                    1     1.000

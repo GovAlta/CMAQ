@@ -37,6 +37,7 @@ C                          correction factor at each call for the surface albedo
 C                          calculation. The goal is to make the code easier to modify.
 C  02/01/19 David Wong   - Implemented centralized I/O approach, removed all MY_N
 C                          clauses
+C  20/10/24 Wen Xu       - Added code to handle USGS28 land use category (changes noted by wx, where appropriate)
 C-----------------------------------------------------------------------
 
          IMPLICIT NONE 
@@ -175,6 +176,9 @@ C...compute start time data and frequency of annual cycle considering leap year
                CASE( 'USGS24' )
                   NUMB_LANDUSE = NUMB_LANDUSE_USGS  ! 24
                   LAND_SCHEME  = LSM_SCHEME
+               CASE( 'USGS28' )                     ! wx
+                  NUMB_LANDUSE = NUMB_LANDUSE_USGS28  ! 28
+                  LAND_SCHEME  = LSM_SCHEME
                CASE( 'MODIS' )
                   NUMB_LANDUSE = NUMB_LANDUSE_MODIS ! 33
                   LAND_SCHEME  = LSM_SCHEME
@@ -244,6 +248,15 @@ C...compute start time data and frequency of annual cycle considering leap year
                CASE( 'USGS24' )
                   ALBMAP_TO_REF( 1:NUMB_LANDUSE ) = ALBMAP_REF2USGS( 1:NUMB_LANDUSE )
                   ALBFAC_TO_REF( 1:NUMB_LANDUSE ) = ALBFAC_REF2USGS( 1:NUMB_LANDUSE )
+               CASE( 'USGS28' )                                                        !wx
+!                  ALBMAP_TO_REF( 1:NUMB_LANDUSE ) =     ALBMAP_REF2USGS( 1:NUMB_LANDUSE )
+!                  ALBFAC_TO_REF( 1:NUMB_LANDUSE ) = ALBFAC_REF2USGS( 1:NUMB_LANDUSE )
+                  ALBMAP_TO_REF( 1:24 ) = ALBMAP_REF2USGS28( 1:24 )
+                  ALBFAC_TO_REF( 1:24 ) = ALBFAC_REF2USGS28( 1:24 )
+                  ALBMAP_TO_REF( 25:27 ) = (/ -1, -1, -1 /)
+              	  ALBFAC_TO_REF( 25:27 ) = (/ 0.0, 0.0, 0.0 /)
+                  ALBMAP_TO_REF( 28 ) = 17
+                  ALBFAC_TO_REF( 28 ) = 1.0
                CASE( 'MODIS' )
                   ALBMAP_TO_REF( 1:NUMB_LANDUSE ) = ALBMAP_REF2MODIS( 1:NUMB_LANDUSE )
                   ALBFAC_TO_REF( 1:NUMB_LANDUSE ) = ALBFAC_REF2MODIS( 1:NUMB_LANDUSE )
@@ -797,3 +810,4 @@ C....sum for net direct albedo
          END SUBROUTINE GET_ALBEDO
 
       END MODULE PHOTOLYSIS_ALBEDO
+

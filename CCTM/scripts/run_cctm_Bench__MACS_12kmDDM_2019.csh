@@ -38,7 +38,7 @@ echo 'Start Model Run At ' `date`
  set PROC      = mpi               #> serial or mpi
  set MECH      = cb6r5_ae7_aq      #> Mechanism ID
 # set MECH      = cb6r3_ae7_aq      #> Mechanism ID
- set APPL      = Bench_2019_MACS_1day_test  #> Application Name (e.g. Gridname)
+ set APPL      = Bench_2019_MACS_3months_test  #> Application Name (e.g. Gridname)
                                                        
 #> Define RUNID as any combination of parameters above or others. By default,
 #> this information will be collected into this one string, $RUNID, for easy
@@ -55,8 +55,9 @@ echo ${VRSN}_${compilerString}
 
 #> Set Working, Input, and Output Directories
  setenv WORKDIR ${CMAQ_HOME}/CCTM/scripts          #> Working Directory. Where the runscript is.
- setenv CMAQ_DATA $CMAQ_HOME/data/12MACS
- setenv OUTDIR  ${CMAQ_DATA}/output_CCTM_${RUNID}_DDM  #> Output Directory
+ setenv CMAQ_DATA /data/MACS-SMOKE_OUTPUT-12km
+ setenv OUTDIR  /mnt/nas/MACS_12km_2019/output_CCTM_${RUNID}_DDM  #> Output Directory
+# setenv OUTDIR  /data/MACS-SMOKE_OUTPUT-12km/output_CCTM_${RUNID}_DDM  #> Output Directory
  setenv INPDIR  ${CMAQ_DATA}            #> Input Directory
  setenv LOGDIR  ${OUTDIR}/LOGS     #> Log Directory Location
  setenv NMLpath ${BLD}             #> Location of Namelists. Common places are: 
@@ -75,8 +76,8 @@ echo ${VRSN}_${compilerString}
 
 #> Set Start and End Days for looping
  setenv NEW_START TRUE             #> Set to FALSE for model restart
- set START_DATE = "2018-12-12"     #> beginning date (July 1, 2016)
- set END_DATE   = "2018-12-12"     #> ending date    (July 1, 2016)
+ set START_DATE = "2018-12-12"     #> beginning date (Dec 12, 2018)
+ set END_DATE   = "2019-05-31"     #> ending date    (Dec 31, 2019)
 
 #> Set Timestepping Parameters
 set STTIME     = 000000            #> beginning GMT time (HHMMSS)
@@ -87,7 +88,7 @@ set TSTEP      = 010000            #> output time step interval (HHMMSS)
 if ( $PROC == serial ) then
    setenv NPCOL_NPROW "1 1"; set NPROCS   = 1 # single processor setting
 else
-   @ NPCOL  = 4; @ NPROW = 4
+   @ NPCOL  = 12; @ NPROW = 8
    @ NPROCS = $NPCOL * $NPROW
    setenv NPCOL_NPROW "$NPCOL $NPROW"; 
 endif
@@ -230,11 +231,11 @@ setenv CTM_WVEL Y            #> save derived vertical velocity component to conc
 #> Input Directories and Filenames
 # =====================================================================
 
-set ICpath    = $INPDIR/icbc                        #> initial conditions input directory 
-set BCpath    = $INPDIR/icbc                        #> boundary conditions input directory
+set ICpath    = $INPDIR/ic                        #> initial conditions input directory 
+set BCpath    = $INPDIR/bc                        #> boundary conditions input directory
 set EMISpath  = $INPDIR/emis                        #> gridded emissions input directory
 set IN_PTpath = $INPDIR/emis                        #> point source emissions input directory
-#set IN_LTpath = $INPDIR/lightning                   #> lightning NOx input directory
+set IN_LTpath = $INPDIR/lightening                   #> lightning NOx input directory
 set METpath   = $INPDIR/met                #> meteorology input directory 
 set JVALpath  = $INPDIR/jproc                      #> offline photolysis rate table directory
 set OMIpath   = $BLD                                #> ozone column data for the photolysis model
@@ -286,17 +287,21 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
 
   #> Initial conditions
   if ($NEW_START == true || $NEW_START == TRUE ) then
-     setenv ICFILE ICON_v54_AEP_MACS_12km_2018346_20181212.ncf
+    #  setenv ICFILE ICON_v54_AEP_MACS_12km_2018346_20181212.ncf
+     setenv ICFILE ICON_v54_AEP_MACS_12km_2018346_20181212-by-CMAQv5.4-IC.ncf
+    #  setenv ICFILE ICON_v54_AEP_MACS_12km_2018346_by_CCTM_CONC_CMAQv532_108km_NHEMI_20181212.ncf
      setenv INIT_MEDC_1 notused
   else
-     set ICpath = $OUTDIR
+    # set ICpath = $INPDIR/ic
+      set ICpath = $OUTDIR
      setenv ICFILE CCTM_CGRID_${RUNID}_${YESTERDAY}.nc
      setenv INIT_MEDC_1 $ICpath/CCTM_MEDIA_CONC_${RUNID}_${YESTERDAY}.nc
   endif
 
   #> Boundary conditions
  # set BCFILE = CCTM_BCON_v54_${MECH}_12NE3_${YYYYMMDD}.nc
-  set BCFILE = BCON_v54_AEP_MACS_12km_2018346_by_CCTM_CONC_CMAQv532_108km_NHEMI_20181212.ncf
+ # set BCFILE = BCON_v54_AEP_MACS_12km_2018346_by_CCTM_CONC_CMAQv532_108km_NHEMI_20181212.ncf
+   set BCFILE = BCON_v54_AEP_MACS_12km_${YYYYMMDD}_by_CCTM_CONC_CMAQv532_108km_NHEMI_${YYYYMMDD}.ncf
 
   #> Off-line photolysis rates 
   #set JVALfile  = JTABLE_${YYYYJJJ}
@@ -320,7 +325,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
 
   setenv GRID_BDY_2D $METpath/GRIDBDY2D_AEP_MACS_12km-D1.${YYYYMMDD}.ncf
   setenv GRID_CRO_2D $METpath/GRIDCRO2D_AEP_MACS_12km-D1.${YYYYMMDD}.ncf
-  setenv GRID_CRO_3D $METpath/GRIDCRO3D_AEP_MACS_12km-D1.${YYYYMMDD}.nc
+  setenv GRID_CRO_3D $METpath/GRIDCRO3D_AEP_MACS_12km-D1.${YYYYMMDD}.ncf
   setenv SOI_CRO     $METpath/SOI_CRO_AEP_MACS_12km-D1.${YYYYMMDD}.ncf
   setenv GRID_DOT_2D $METpath/GRIDDOT2D_AEP_MACS_12km-D1.${YYYYMMDD}.ncf
   setenv MET_CRO_2D $METpath/METCRO2D_AEP_MACS_12km-D1.${YYYYMMDD}.ncf
@@ -379,9 +384,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
 #  setenv GR_EMIS_002 ${EMISpath}/rwc/${EMISfile}
 #  setenv GR_EMIS_LAB_002 GR_RES_FIRES
 #  setenv GR_EM_SYM_DATE_002 F # To change default behaviour please see Users Guide for EMIS_SYM_DATE
-q
-
-  setenv N_EMIS_GR 14
+  setenv N_EMIS_GR 13
  # setenv N_EMIS_GR 0
  # set EMISfile  = emis_mole_all_${YYYYMMDD}_12NE3_nobeis_norwc_2018gc_cb6_18j.ncf
   set EMISfile  = agts_l.AS_AG_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
@@ -416,7 +419,7 @@ q
 
  # set EMISfile  = emis_mole_rwc_${YYYYMMDD}_12NE3_cmaq_cb6ae7_2018gc_cb6_18j.ncf
  # setenv GR_EMIS_006 ${EMISpath}/AB/rwc/${EMISfile}
-   set EMISfile  = agts_s.AS_CT_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
+   set EMISfile  = agts_l.AS_CT_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
    setenv GR_EMIS_006 ${EMISpath}/AB/CT/area/${EMISfile}
   setenv GR_EMIS_LAB_006 GR_EMIS_CT
   setenv GR_EM_SYM_DATE_006 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
@@ -437,7 +440,7 @@ q
 
 #  set EMISfile  = emis_mole_all_${YYYYMMDD}_12NE3_nobeis_norwc_2018gc_cb6_18j.ncf
 #  setenv GR_EMIS_009 ${EMISpath}/AB/merged_nobeis_norwc/${EMISfile}
-  set EMISfile  = agts_s.AS_PVRD_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
+  set EMISfile  = agts_l.AS_PVRD_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
   setenv GR_EMIS_009 ${EMISpath}/AB/PVRD/area/${EMISfile}
   setenv GR_EMIS_LAB_009 GR_EMIS_PVRD
   setenv GR_EM_SYM_DATE_009 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
@@ -451,31 +454,31 @@ q
 
 #  set EMISfile  = emis_mole_all_${YYYYMMDD}_12NE3_nobeis_norwc_2018gc_cb6_18j.ncf
 #  setenv GR_EMIS_011 ${EMISpath}/merged_nobeis_norwc/${EMISfile}
-  set EMISfile  = agts_s.AS_PVRD_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
-  setenv GR_EMIS_011 ${EMISpath}/AB/PVRD/area/${EMISfile}
-  setenv GR_EMIS_LAB_011 GR_EMIS_PVRD
-  setenv GR_EM_SYM_DATE_011 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
+#  set EMISfile  = agts_s.AS_PVRD_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
+#  setenv GR_EMIS_011 ${EMISpath}/AB/PVRD/area/${EMISfile}
+#  setenv GR_EMIS_LAB_011 GR_EMIS_PVRD
+#  setenv GR_EM_SYM_DATE_011 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
 
   set EMISfile  = agts_l.AS_OTHER_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
-  setenv GR_EMIS_012 ${EMISpath}/AB/OTHER/area/${EMISfile}
-  setenv GR_EMIS_LAB_012 GR_EMIS_OTHER
-  setenv GR_EM_SYM_DATE_012 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
+  setenv GR_EMIS_011 ${EMISpath}/AB/OTHER/area/${EMISfile}
+  setenv GR_EMIS_LAB_011 GR_EMIS_OTHER
+  setenv GR_EM_SYM_DATE_011 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
 
 
 #  set EMISfile  = emis_mole_rwc_${YYYYMMDD}_12NE3_cmaq_cb6ae7_2018gc_cb6_18j.ncf
 #  setenv GR_EMIS_012 ${EMISpath}/rwc/${EMISfile}
   set EMISfile  = emis_l.ALL_AS+MB-noAB-CA+US-nobeis-MACS.${YYYYMMDD}.1.12km.base2019.ncf 
-  setenv GR_EMIS_013 ${EMISpath}/noAB/area/${EMISfile}
-  setenv GR_EMIS_LAB_013 GR_RES_noAB_area
-  setenv GR_EM_SYM_DATE_013 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
+  setenv GR_EMIS_012 ${EMISpath}/noAB/area/${EMISfile}
+  setenv GR_EMIS_LAB_012 GR_RES_noAB_area
+  setenv GR_EM_SYM_DATE_012 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
 
 #  set EMISfile  = emis_mole_all_${YYYYMMDD}_12NE3_nobeis_norwc_2018gc_cb6_18j.ncf
-#  setenv GR_EMIS_014 ${EMISpath}/merged_nobeis_norwc/${EMISfile}
+#  setenv GR_EMIS_013 ${EMISpath}/merged_nobeis_norwc/${EMISfile}
   set EMISfile  = MEGAN_AEP_MACS_12km-D1.CB6.${YYYYMMDD}.ncf
-  setenv GR_EMIS_014 /data/MACS_test_1Day_data/megan/${EMISfile}
-  setenv GR_EMIS_LAB_014 GR_EMIS_MEGAN
-  setenv GR_EM_SYM_DATE_014 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
-   echo $GR_EMIS_014
+  setenv GR_EMIS_013  /data/MACS-SMOKE_OUTPUT-12km/megan/${EMISfile}
+  setenv GR_EMIS_LAB_013 GR_EMIS_MEGAN
+  setenv GR_EM_SYM_DATE_013 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
+   echo $GR_EMIS_013
 #  set EMISfile  = emis_mole_rwc_${YYYYMMDD}_12NE3_cmaq_cb6ae7_2018gc_cb6_18j.ncf
 #  setenv GR_EMIS_002 ${EMISpath}/rwc/${EMISfile}
 #  setenv GR_EMIS_LAB_002 GR_RES_FIRES
@@ -555,7 +558,7 @@ q
 #  setenv STK_GRPS_005 $IN_PTpath/ptfire-rx/stack_groups_ptfire-rx_${YYYYMMDD}_${STKCASEG}.ncf
   setenv STK_GRPS_005 $IN_PTpath//AB/EPG/point/stack_groups.PS_EPG_ABonly.12km.base2019.ncf
 #  setenv STK_GRPS_006 $IN_PTpath/ptfire-wild/stack_groups_ptfire-wild_${YYYYMMDD}_${STKCASEG}.ncf
-  setenv STK_GRPS_006 $IN_PTpath//AB/MDOG/POINT/stack_groups.PS_MDOG_ABonly.12km.base2019.ncf
+  setenv STK_GRPS_006 $IN_PTpath//AB/MDOG/point/stack_groups.PS_MDOG_ABonly.12km.base2019.ncf
 
 #  setenv STK_GRPS_007 $IN_PTpath/ptfire_othna/stack_groups_ptfire_othna_${YYYYMMDD}_${STKCASEG}.ncf
    setenv STK_GRPS_007 $IN_PTpath/AB/MUOG/point/stack_groups.PS_MUOG_ABonly.12km.base2019.ncf
@@ -576,7 +579,7 @@ q
   setenv STK_GRPS_012 $IN_PTpath/AB/SUOG/point/stack_groups.PS_SUOG_ABonly.12km.base2019.ncf
 
 #  setenv STK_GRPS_013 $IN_PTpath/othpt/stack_groups_othpt_${STKCASEG}.ncf
- setenv STK_GRPS_013 $IN_PTpath/noAB/points/CA/ptfire_canada/stack_groups_ptfire_othna_20181212_AEP_MACS_12US_2019ge_cb6_19k.ncf
+ setenv STK_GRPS_013 $IN_PTpath/noAB/points/CA/ptfire_canada/stack_groups_ptfire_othna_${YYYYMMDD}_AEP_MACS_12US_2019ge_cb6_19k.ncf
 
 #  setenv STK_GRPS_014 $IN_PTpath/ptagfire/stack_groups_ptagfire_${YYYYMMDD}_${STKCASEG}.ncf
  setenv STK_GRPS_014 $IN_PTpath/noAB/points/CA/pt_noAB/stack_groups.PS_ALL-EPGP+UOGP+VOC+noRD+RD+T1_noAB.12km.base2019.ncf
@@ -591,7 +594,7 @@ q
   setenv STK_GRPS_017 $IN_PTpath/noAB/points/US/ptegu/stack_groups_ptegu_AEP_MACS_12US_2019ge_cb6_19k.ncf
 
 #  setenv STK_GRPS_018 $IN_PTpath/pt_oilgas/stack_groups_pt_oilgas_${STKCASEG}.ncf
-  setenv STK_GRPS_018 $IN_PTpath/noAB/points/US/ptfire-wild/stack_groups_ptfire-wild_20181212_AEP_MACS_12US_2019ge_cb6_19k.ncf
+  setenv STK_GRPS_018 $IN_PTpath/noAB/points/US/ptfire-wild/stack_groups_ptfire-wild_${YYYYMMDD}_AEP_MACS_12US_2019ge_cb6_19k.ncf
 
 #  setenv STK_GRPS_019 $IN_PTpath/cmv_c3_12/stack_groups_cmv_c3_12_${STKCASEG}.ncf
    setenv STK_GRPS_019 $IN_PTpath/noAB/points/US/pt_oilgas/stack_groups_pt_oilgas_AEP_MACS_12US_2019ge_cb6_19k.ncf
@@ -600,9 +603,9 @@ q
   setenv STK_GRPS_020 $IN_PTpath/noAB/points/US/cmv_c3_12/stack_groups_cmv_c3_12_AEP_MACS_12US_2019ge_cb6_19k.ncf
 
 #  setenv STK_GRPS_021 $IN_PTpath/cmv_c1c2_12/stack_groups_cmv_c1c2_12_${STKCASEG}.ncf
-  setenv STK_GRPS_021 $IN_PTpath/noAB/points/US/ptagfire/stack_groups_ptagfire_20181212_AEP_MACS_12US_2019ge_cb6_19k.ncf
+  setenv STK_GRPS_021 $IN_PTpath/noAB/points/US/ptagfire/stack_groups_ptagfire_${YYYYMMDD}_AEP_MACS_12US_2019ge_cb6_19k.ncf
 #  setenv STK_GRPS_022 $IN_PTpath/cmv_c1c2_12/stack_groups_cmv_c1c2_12_${STKCASEG}.ncf
-  setenv STK_GRPS_022 $IN_PTpath/noAB/points/US/ptfire-px/stack_groups_ptfire-rx_20181212_AEP_MACS_12US_2019ge_cb6_19k.ncf
+  setenv STK_GRPS_022 $IN_PTpath/noAB/points/US/ptfire-px/stack_groups_ptfire-rx_${YYYYMMDD}_AEP_MACS_12US_2019ge_cb6_19k.ncf
 #  setenv STK_GRPS_023 $IN_PTpath/cmv_c1c2_12/stack_groups_cmv_c1c2_12_${STKCASEG}.ncf
   setenv STK_GRPS_023 $IN_PTpath/noAB/points/US/ptnonipm/stack_groups_ptnonipm_AEP_MACS_12US_2019ge_cb6_19k.ncf
 
@@ -618,66 +621,66 @@ q
  # setenv STK_EMIS_009 $IN_PTpath/cmv_c3_12/inln_mole_cmv_c3_12_${YYYYMMDD}_${STKCASEE}.ncf
  # setenv STK_EMIS_010 $IN_PTpath/cmv_c1c2_12/inln_mole_cmv_c1c2_12_${YYYYMMDD}_${STKCASEE}.ncf
 
-  setenv STK_EMIS_001 $IN_PTpath//AB/EPA_REG/point/inlnts_l.PS_EPA_REG_ABonly.20181212.1.12km.base2019.ncf
+  setenv STK_EMIS_001 $IN_PTpath//AB/EPA_REG/point/inlnts_l.PS_EPA_REG_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
  # setenv STK_EMIS_002 $IN_PTpath/ptegu/inln_mole_ptegu_${YYYYMMDD}_${STKCASEE}.ncf
- setenv STK_EMIS_002 $IN_PTpath/AB/FW/point/inlnts_l.PS_FW_ABonly.20181212.1.12km.base2019.ncf
+ setenv STK_EMIS_002 $IN_PTpath/AB/FW/point/inlnts_l.PS_FW_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
  # setenv STK_EMIS_003 $IN_PTpath/othpt/inln_mole_othpt_${YYYYMMDD}_${STKCASEE}.ncf
-  setenv STK_EMIS_003 $IN_PTpath/AB/CL/point/inlnts_l.PS_CL_ABonly.20181212.1.12km.base2019.ncf
+  setenv STK_EMIS_003 $IN_PTpath/AB/CL/point/inlnts_l.PS_CL_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
 
  #  setenv STK_EMIS_004 $IN_PTpath/ptagfire/inln_mole_ptagfire_${YYYYMMDD}_${STKCASEE}.ncf
-   setenv STK_EMIS_004  $IN_PTpath/AB/CT/point/inlnts_l.PS_CT_ABonly.20181212.1.12km.base2019.ncf
+   setenv STK_EMIS_004  $IN_PTpath/AB/CT/point/inlnts_l.PS_CT_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
  # setenv STK_EMIS_005 $IN_PTpath/ptfire-rx/inln_mole_ptfire-rx_${YYYYMMDD}_${STKCASEE}.ncf
-   setenv STK_EMIS_005 $IN_PTpath//AB/EPG/point/inlnts_l.PS_EPG_ABonly.20181212.1.12km.base2019.ncf
+   setenv STK_EMIS_005 $IN_PTpath//AB/EPG/point/inlnts_l.PS_EPG_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
 
  # setenv STK_EMIS_006 $IN_PTpath/ptfire-wild/inln_mole_ptfire-wild_${YYYYMMDD}_${STKCASEE}.ncf
-   setenv STK_EMIS_006 $IN_PTpath//AB/MDOG/POINT/inlnts_l.PS_MDOG_ABonly.20181212.1.12km.base2019.ncf
+   setenv STK_EMIS_006 $IN_PTpath/AB/MDOG/point/inlnts_l.PS_MDOG_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
 
 #  setenv STK_EMIS_007 $IN_PTpath/ptfire_othna/inln_mole_ptfire_othna_${YYYYMMDD}_${STKCASEE}.ncf
-   setenv STK_EMIS_007 $IN_PTpath/AB/MUOG/point/inlnts_l.PS_MUOG_ABonly.20181212.1.12km.base2019.ncf
+   setenv STK_EMIS_007 $IN_PTpath/AB/MUOG/point/inlnts_l.PS_MUOG_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
 
 #  setenv STK_EMIS_008 $IN_PTpath/pt_oilgas/inln_mole_pt_oilgas_${YYYYMMDD}_${STKCASEE}.ncf
-    setenv STK_EMIS_008 $IN_PTpath/AB/MUUOG/point/inlnts_l.PS_MUUOG_ABonly.20181212.1.12km.base2019.ncf
+    setenv STK_EMIS_008 $IN_PTpath/AB/MUUOG/point/inlnts_l.PS_MUUOG_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
 #  setenv STK_EMIS_009 $IN_PTpath/cmv_c3_12/inln_mole_cmv_c3_12_${YYYYMMDD}_${STKCASEE}.ncf
-   setenv STK_EMIS_009 $IN_PTpath/AB/ORET/point/inlnts_l.PS_ORET_ABonly.20181212.1.12km.base2019.ncf
+   setenv STK_EMIS_009 $IN_PTpath/AB/ORET/point/inlnts_l.PS_ORET_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
 
 #  setenv STK_EMIS_010 $IN_PTpath/cmv_c1c2_12/inln_mole_cmv_c1c2_12_${YYYYMMDD}_${STKCASEE}.ncf
-   setenv STK_EMIS_010 $IN_PTpath//AB/OTHER/point/inlnts_l.PS_OTHER_ABonly.20181212.1.12km.base2019.ncf
+   setenv STK_EMIS_010 $IN_PTpath//AB/OTHER/point/inlnts_l.PS_OTHER_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
 #  setenv STK_EMIS_011 $IN_PTpath/ptnonipm/inln_mole_ptnonipm_${YYYYMMDD}_${STKCASEE}.ncf
-  setenv STK_EMIS_011 $IN_PTpath/AB/ROT/point/inlnts_l.PS_ROT_ABonly.20181212.1.12km.base2019.ncf
+  setenv STK_EMIS_011 $IN_PTpath/AB/ROT/point/inlnts_l.PS_ROT_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
 
 #  setenv STK_EMIS_012 $IN_PTpath/ptegu/inln_mole_ptegu_${YYYYMMDD}_${STKCASEE}.ncf
-  setenv STK_EMIS_012 $IN_PTpath/AB/SUOG/point/inlnts_l.PS_SUOG_ABonly.20181212.1.12km.base2019.ncf
+  setenv STK_EMIS_012 $IN_PTpath/AB/SUOG/point/inlnts_l.PS_SUOG_ABonly.${YYYYMMDD}.1.12km.base2019.ncf
 
 #  setenv STK_EMIS_013 $IN_PTpath/othpt/inln_mole_othpt_${YYYYMMDD}_${STKCASEE}.ncf
-   setenv STK_EMIS_013 $IN_PTpath/noAB/points/CA/ptfire_canada/inln_mole_ptfire_othna_20181212_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
+   setenv STK_EMIS_013 $IN_PTpath/noAB/points/CA/ptfire_canada/inln_mole_ptfire_othna_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
 
 #  setenv STK_EMIS_014 $IN_PTpath/ptagfire/inln_mole_ptagfire_${YYYYMMDD}_${STKCASEE}.ncf
-   setenv STK_EMIS_014 $IN_PTpath/noAB/points/CA/pt_noAB/inlnts_l.PS_ALL-EPGP+UOGP+VOC+noRD+RD+T1_noAB.20181212.1.12km.base2019.ncf
+   setenv STK_EMIS_014 $IN_PTpath/noAB/points/CA/pt_noAB/inlnts_l.PS_ALL-EPGP+UOGP+VOC+noRD+RD+T1_noAB.${YYYYMMDD}.1.12km.base2019.ncf
 
 #  setenv STK_EMIS_005 $IN_PTpath/ptfire-rx/inln_mole_ptfire-rx_${YYYYMMDD}_${STKCASEE}.ncf
-  setenv STK_EMIS_015 $IN_PTpath/noAB/points/US/cmv_c1c2_12/inln_mole_cmv_c1c2_12_20181212_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
+  setenv STK_EMIS_015 $IN_PTpath/noAB/points/US/cmv_c1c2_12/inln_mole_cmv_c1c2_12_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
 
 #  setenv STK_EMIS_016 $IN_PTpath/ptfire-wild/inln_mole_ptfire-wild_${YYYYMMDD}_${STKCASEE}.ncf
-   setenv STK_EMIS_016 $IN_PTpath/noAB/points/US/pt-airport/inlnts_l.PS_airport-US.20181212.1.12km.base2019.ncf
+   setenv STK_EMIS_016 $IN_PTpath/noAB/points/US/pt-airport/inlnts_l.PS_airport-US.${YYYYMMDD}.1.12km.base2019.ncf
 
 #  setenv STK_EMIS_017 $IN_PTpath/ptfire_othna/inln_mole_ptfire_othna_${YYYYMMDD}_${STKCASEE}.ncf
-  setenv STK_EMIS_017 $IN_PTpath/noAB/points/US/ptegu/inln_mole_ptegu_20181212_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
+  setenv STK_EMIS_017 $IN_PTpath/noAB/points/US/ptegu/inln_mole_ptegu_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
 
 #  setenv STK_EMIS_018 $IN_PTpath/pt_oilgas/inln_mole_pt_oilgas_${YYYYMMDD}_${STKCASEE}.ncf
-  setenv STK_EMIS_018 $IN_PTpath/noAB/points/US/ptfire-wild/inln_mole_ptfire-wild_20181212_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
+  setenv STK_EMIS_018 $IN_PTpath/noAB/points/US/ptfire-wild/inln_mole_ptfire-wild_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
 
 #  setenv STK_EMIS_019 $IN_PTpath/cmv_c3_12/inln_mole_cmv_c3_12_${YYYYMMDD}_${STKCASEE}.ncf
- setenv STK_EMIS_019 $IN_PTpath/noAB/points/US/pt_oilgas/inln_mole_pt_oilgas_20181212_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
+ setenv STK_EMIS_019 $IN_PTpath/noAB/points/US/pt_oilgas/inln_mole_pt_oilgas_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
 
 #  setenv STK_EMIS_020 $IN_PTpath/cmv_c1c2_12/inln_mole_cmv_c1c2_12_${YYYYMMDD}_${STKCASEE}.ncf
-    setenv STK_EMIS_020 $IN_PTpath/noAB/points/US/cmv_c3_12/inln_mole_cmv_c3_12_20181212_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
+    setenv STK_EMIS_020 $IN_PTpath/noAB/points/US/cmv_c3_12/inln_mole_cmv_c3_12_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
 
 # setenv STK_EMIS_021 $IN_PTpath/cmv_c1c2_12/inln_mole_cmv_c1c2_12_${YYYYMMDD}_${STKCASEE}.ncf
-    setenv STK_EMIS_021 $IN_PTpath/noAB/points/US/ptagfire/inln_mole_ptagfire_20181212_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
+    setenv STK_EMIS_021 $IN_PTpath/noAB/points/US/ptagfire/inln_mole_ptagfire_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
 # setenv STK_EMIS_022 $IN_PTpath/cmv_c1c2_12/inln_mole_cmv_c1c2_12_${YYYYMMDD}_${STKCASEE}.ncf
-    setenv STK_EMIS_022 $IN_PTpath/noAB/points/US/ptfire-px/inln_mole_ptfire-rx_20181212_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
+    setenv STK_EMIS_022 $IN_PTpath/noAB/points/US/ptfire-px/inln_mole_ptfire-rx_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
 # setenv STK_EMIS_023 $IN_PTpath/cmv_c1c2_12/inln_mole_cmv_c1c2_12_${YYYYMMDD}_${STKCASEE}.ncf
-    setenv STK_EMIS_023 $IN_PTpath/noAB/points/US/ptnonipm/inln_mole_ptnonipm_20181212_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
+    setenv STK_EMIS_023 $IN_PTpath/noAB/points/US/ptnonipm/inln_mole_ptnonipm_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
 
 
   # Label Each Emissions Stream
@@ -794,7 +797,7 @@ q
 
   #> In-line sea spray emissions configuration
   #setenv OCEAN_1 $SZpath/OCEAN_${MM}_L3m_MC_CHL_chlor_a_12NE3.nc #> horizontal grid-dependent ocean file
-  setenv OCEAN_1   $SZpath/ocean_file_AEP_MACS_12km-updated.ncf
+  #setenv OCEAN_1   $SZpath/ocean_file_AEP_MACS_12km-updated.ncf
 
   #> Bidirectional ammonia configuration
   if ( $CTM_ABFLUX == 'Y' ) then

@@ -80,6 +80,7 @@ C 08 Jun 12 J.Young: remove full character blank padding for GNU Fortran (GCC) 4
 C 07 Jul 14 B.Hutzell: replaced mechanism include file(s) with fortran module
 C 07 Nov 14 J.Bash: Updated for the ASX_DATA_MOD shared data module. 
 C    May 16 B. Murphy, H. Pye: Updated treatment of aerosol moments
+C 20 Oct 24 W. Xu: Added code to handle USGS28 land use category ((changes noted by wx, where appropriate)
 C-----------------------------------------------------------------------
 
       USE GRID_CONF           ! horizontal & vertical domain specifications
@@ -325,6 +326,7 @@ C                     (Rd) by LAI for vegetated fraction of grid cell. Developed
 C                     based on analysis by Qian Shu, University of Florida. 
 C  Feb2022 J.Pleim:   Revised aerosol dry deposition model as described in Pleim et al, (2022)
 C                     Note that this version only works for NLCD40, MODIS20 or USGS24
+C  Oct2024   W. Xu:   Added code to handle USGS28 land use category, based on CMAQ5.3 STAGE.              
 C-----------------------------------------------------------------------
 
       USE GRID_CONF, Only: ncols, nrows
@@ -469,6 +471,22 @@ C For USGS24
      >          1.0,    1.0,    1.0,   1.0,    1.0,
      >          1.0,    1.0,    1.0,   1.0,    1.0,
      >          1.0,    1.0,    1.0,   1.0  /
+C wx For USGS28
+      REAL, DIMENSION(28) :: Aleaf_lu28,BAI_lu28
+      DATA Aleaf_lu28                                    ! mm
+     >        / 5.0,    4.0,    4.0,   4.0,    2.0,
+     >          5.0,    0.5,    2.0,   1.0,    3.0,
+     >          10.0,   2.0,    10.0,  2.0,    5.0,
+     >          1.0,    3.0,    5.0,   0.5,    2.0,
+     >          4.0,    3.0,    1.0,   1.0,    0.0,
+     >          0.0,    0.0,    1.0  /
+      DATA BAI_lu28
+     >        / 2.0,    1.0,    1.0,   1.0,    1.0,
+     >          1.0,    1.0,    1.0,   1.0,    1.0,
+     >          1.0,    1.0,    1.0,   1.0,    1.0,
+     >          1.0,    1.0,    1.0,   1.0,    1.0,
+     >          1.0,    1.0,    1.0,   1.0,    0.0,
+     >          0.0,    0.0,    1.0  /
 C-----------------------------------------------------------------------
 
       VDEP  = 0.0   ! array assignment
@@ -528,6 +546,14 @@ C Calculate characteristic parameters
                   BAI =  BAI + BAI_lu24(j) * GRID_DATA%LUFRAC( c,r,j )
                 endif
              enddo
+! wx Set scale parameters for 2-term impaction by LU - For USGS28
+            else if (n_lufrac .eq. 28) Then
+              Do j = 1, n_lufrac
+                If ( GRID_DATA%LUFRAC( c,r,j ) .Gt. 0.0 ) Then
+                  Aleaf =  Aleaf + Aleaf_lu(j) * GRID_DATA%LUFRAC( c,r,j )
+                  BAI =  BAI + BAI_lu(j) * GRID_DATA%LUFRAC( c,r,j )
+                endif
+             enddo
             else
 ! Set scale parameters for 2-term impaction by LU - For NLCD40 or MODIS20
               Do j = 1, n_lufrac
@@ -552,6 +578,12 @@ C Calculate characteristic parameters
      &               + GRID_DATA%LUFRAC( c,r,3 )    !Modis Deciduous Needleleaf
      &               + Fgrass
            else if(n_lufrac .eq. 24) Then
+             Fgrass =  GRID_DATA%LUFRAC( c,r,7 )        !USGS grass
+     &               + 0.5 * GRID_DATA%LUFRAC( c,r,5 )  !USGS Grassland/Cropland Mosaic
+             Fneedle = GRID_DATA%LUFRAC( c,r,14 )       !USGS Evergreen Needleleaf
+     &               + GRID_DATA%LUFRAC( c,r,12 )       !USGS Deciduous Needleleaf
+     &               + Fgrass
+           else if(n_lufrac .eq. 28) Then
              Fgrass =  GRID_DATA%LUFRAC( c,r,7 )        !USGS grass
      &               + 0.5 * GRID_DATA%LUFRAC( c,r,5 )  !USGS Grassland/Cropland Mosaic
              Fneedle = GRID_DATA%LUFRAC( c,r,14 )       !USGS Evergreen Needleleaf
@@ -685,3 +717,4 @@ C now do 3rd moment for the deposition of mass
 
       RETURN
       END SUBROUTINE GETDEP_V
+

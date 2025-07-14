@@ -29,7 +29,7 @@ echo 'Start Model Run At ' `date`
 
 #> Source the config.cmaq file to set the build environment
  cd ../..
- source ./config_cmaq_remote_storage.csh $compiler $compilerVrsn
+ source ./config_cmaq.csh $compiler $compilerVrsn
  cd CCTM/scripts
 
 #> Set General Parameters for Configuring the Simulation
@@ -86,7 +86,7 @@ set TSTEP      = 010000            #> output time step interval (HHMMSS)
 if ( $PROC == serial ) then
    setenv NPCOL_NPROW "1 1"; set NPROCS   = 1 # single processor setting
 else
-   @ NPCOL  =  8; @ NPROW =  4
+   @ NPCOL  =  2; @ NPROW =  2
    @ NPROCS = $NPCOL * $NPROW
    setenv NPCOL_NPROW "$NPCOL $NPROW"; 
 endif

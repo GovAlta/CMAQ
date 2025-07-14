@@ -27,6 +27,7 @@
 !                     to map dust categories from LUFRAC. **NOTE land use type
 !                     with no mapped index has a dummy -999 value.** 
 !  31 Mar 2022 J. Willison Removed BELD as wbdust input 
+!  20 Oct 2024 W. Xu Added code to handle USGS28 land use category (changes noted by wx, where appropriate)
 !------------------------------------------------------------------------!
 
           module lus_data_module
@@ -118,6 +119,64 @@
      &            lus_type( 'LUFRAC_22', 'Mixed Tundra                                    ' ),
      &            lus_type( 'LUFRAC_23', 'Bare Ground Tundra                              ' ),
      &            lus_type( 'LUFRAC_24', 'Snow or Ice                                     ' ) /)
+
+
+! USGS28 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -!wx
+!     read file: GRID_CRO_2D
+
+            integer, parameter :: n_dlcat_usgs28 = 4   ! number of desert land categories
+            type( lus_type_2 ), parameter :: vnmld_usgs28( n_dlcat_usgs28 ) = (/
+     &            lus_type_2( 'LUFRAC_08', 'Shrubland                   ',8  ),
+     &            lus_type_2( 'LUFRAC_19', 'Barren or Sparsely Vegetated',19 ),
+     &            lus_type_2( 'LUFRAC_22', 'Mixed Tundra                ',22 ),
+     &            lus_type_2( 'LUFRAC_23', 'Bare Ground Tundra          ',23 ) /)
+
+!!!!!    Is some 'tundra' desert land?
+
+            real :: dmsk_usgs28( n_dlcat_usgs28 ) =   ! land use type desert fraction
+     &           (/ 0.50,    ! shrubland
+     &              0.75,    ! barrenland
+     &              0.75,    ! barrenland
+     &              0.75 /)  ! barrenland
+
+            integer :: dmap_usgs28( n_dlcat_usgs28+1 ) =   ! land use type desert map to BELD3
+     &           (/ 1,       ! shrubland
+     &              3,       ! barrenland
+     &              3,       ! barrenland
+     &              3,       ! barrenland
+     &              3 /)     ! ag landuse surrogate
+
+            integer, parameter :: n_lucat_usgs28 = 28   ! number of landuse categories
+            type( lus_type ), parameter :: vnmlu_usgs28( n_lucat_usgs28 ) = (/
+     &            lus_type( 'LUFRAC_01', 'Urban Land                                      ' ),
+     &            lus_type( 'LUFRAC_02', 'Dryland Cropland and Pasture                    ' ),
+     &            lus_type( 'LUFRAC_03', 'Irrigated Cropland and Pasture                  ' ),
+     &            lus_type( 'LUFRAC_04', 'Mixed Dryland and Irrigated Cropland and Pasture' ),
+     &            lus_type( 'LUFRAC_05', 'Cropland-Grassland Mosaic                       ' ),
+     &            lus_type( 'LUFRAC_06', 'Cropland-Woodland Mosaic                        ' ),
+     &            lus_type( 'LUFRAC_07', 'Grassland                                       ' ),
+     &            lus_type( 'LUFRAC_08', 'Shrubland                                       ' ),
+     &            lus_type( 'LUFRAC_09', 'Mixed Shrubland-Grassland                       ' ),
+     &            lus_type( 'LUFRAC_10', 'Savannah                                        ' ),
+     &            lus_type( 'LUFRAC_11', 'Deciduous Broadleaf Forest                      ' ),
+     &            lus_type( 'LUFRAC_12', 'Deciduous Needleleaf Forest                     ' ),
+     &            lus_type( 'LUFRAC_13', 'Evergreen Broadleaf Forest                      ' ),
+     &            lus_type( 'LUFRAC_14', 'Evergreen Needleleaf Forest                     ' ),
+     &            lus_type( 'LUFRAC_15', 'Mixed Forest                                    ' ),
+     &            lus_type( 'LUFRAC_16', 'Water                                           ' ),
+     &            lus_type( 'LUFRAC_17', 'Herbaceous Wetland                              ' ),
+     &            lus_type( 'LUFRAC_18', 'Wooded Wetland                                  ' ),
+     &            lus_type( 'LUFRAC_19', 'Barren or Sparsely Vegetated                    ' ),
+     &            lus_type( 'LUFRAC_20', 'Herbaceous Tundra                               ' ),
+     &            lus_type( 'LUFRAC_21', 'Wooded Tundra                                   ' ),
+     &            lus_type( 'LUFRAC_22', 'Mixed Tundra                                    ' ),
+     &            lus_type( 'LUFRAC_23', 'Bare Ground Tundra                              ' ),
+     &            lus_type( 'LUFRAC_24', 'Snow or Ice                                     ' ),
+     &            lus_type( 'LUFRAC_25', 'UNASSIGN                                        ' ),
+     &            lus_type( 'LUFRAC_26', 'UNASSIGN                                        ' ),
+     &            lus_type( 'LUFRAC_27', 'UNASSIGN                                        ' ),
+     &            lus_type( 'LUFRAC_28', 'Water                                           ' ) /)
+
 
 ! MODIS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 !     read file: GRID_CRO_2D
@@ -356,3 +415,4 @@
      &            lus_type( 'LUFRAC_40', 'Emergent Herbaceous Wetlands      ' )  /)  ! ?
 
           end module lus_data_module
+

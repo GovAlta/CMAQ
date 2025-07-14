@@ -16,7 +16,8 @@
 !  General Public License or the GNU Lesser General Public License is    !
 !  subject to their copyright restrictions.                              !
 !------------------------------------------------------------------------!
-
+! Revision History:
+! 29 Nov 24 W. Xu, B.Zelt: Added code to handle USGS28 land use category (changes noted by wx, bz where appropriate)
 
 
 !:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -264,6 +265,12 @@
       INTEGER,       ALLOCATABLE :: ALBMAP_REF2USGS( : )
       REAL,          ALLOCATABLE :: ALBFAC_REF2USGS( : )
 
+      INTEGER, PARAMETER         :: NUMB_EXPECT_USGS28  = 28  !wx,bz
+      INTEGER                    :: NUMB_LANDUSE_USGS28       !wx,bz
+      CHARACTER(60), ALLOCATABLE :: LANDUSE_USGS28( : )       !wx,bz
+      INTEGER,       ALLOCATABLE :: ALBMAP_REF2USGS28( : )    !wx,bz
+      REAL,          ALLOCATABLE :: ALBFAC_REF2USGS28( : )    !wx,bz
+
       INTEGER, PARAMETER         :: NUMB_EXPECT_MODIS = 33
       INTEGER                    :: NUMB_LANDUSE_MODIS
       CHARACTER(60), ALLOCATABLE :: LANDUSE_MODIS( : )
@@ -384,7 +391,6 @@ C...begin read
           CALL M3WARN( PNAME, 0, 0, MSG )
          ERROR_FLAG = .TRUE.
       END IF
-
 
 #ifdef verbose_phot
       write( LOGDEV,'(A,a32)' )'JTABLE_REF = ',trim(jtable_ref)
@@ -1309,6 +1315,32 @@ C...begin read
      &                          albfac_ref2usgs( itt_load )
 #endif
 
+      END DO
+
+      READ( OPTICS_UNIT,5013 ) NUMB_LANDUSE_USGS28 !wx
+      READ( OPTICS_UNIT,'(A)' ) FILE_LINE ! skip line
+#ifdef verbose_phot
+      write( LOGDEV,6013 ) 'NUMB_USGS28 = ', numb_landuse_usgs28 !wx
+      write( LOGDEV, '(a)' )TRIM(FILE_LINE)
+#endif
+
+      ALLOCATE( LANDUSE_USGS28   ( NUMB_LANDUSE_USGS28 ) )       !wx
+      ALLOCATE( ALBMAP_REF2USGS28( NUMB_LANDUSE_USGS28 ) )       !wx
+      ALLOCATE( ALBFAC_REF2USGS28( NUMB_LANDUSE_USGS28 ) )       !wx
+
+      DO ITT_LOAD = 1, NUMB_LANDUSE_USGS28                       !wx
+         READ( OPTICS_UNIT,5016 ) LANDUSE_USGS28( ITT_LOAD ),    !wx
+     &                            ALBMAP_REF2USGS28( ITT_LOAD ), !wx
+     &                            ALBFAC_REF2USGS28( ITT_LOAD )  !wx
+!     &                            ALBMAP_REF2USGS( ITT_LOAD ),
+!     &                            ALBFAC_REF2USGS( ITT_LOAD )
+
+
+#ifdef verbose_phot
+         write( LOGDEV,6016 ) itt_load, landuse_usgs28( itt_load ),  !wx
+     &                          albmap_ref2usgs28( itt_load ),       !wx
+     &                          albfac_ref2usgs28( itt_load )        !wx
+#endif
       END DO
 
       READ( OPTICS_UNIT,5013 ) NUMB_LANDUSE_MODIS
@@ -2514,3 +2546,4 @@ C-----------------------------------------------------------------------
           RETURN
        END FUNCTION RQY_GLYOXAL
       END MODULE CSQY_DATA
+

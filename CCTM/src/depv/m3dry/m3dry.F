@@ -147,6 +147,7 @@ C            June 2018  revised for v5.3 - removed mosaic, new epic-bidi - j ple
 C          01 Feb 2019  D. Wong: Implemented centralized I/O approach, removed all MY_N clauses
 C          12 Dec 2019  S.L.Napelenok: update for cmaq 5.3.1
 C          August 2020  J Pleim: corrected TSTEP to be DTSEC. Corrects NH3 bidi emis, dep outputs
+C           2 Jan 2025  W. Xu: Added code to handle USGS28 land use category (changes noted by wx, where appropriate)
 C-------------------------------------------------------------------------------
 
       USE RUNTIME_VARS
@@ -873,6 +874,7 @@ C-------------------------------------------------------------------------------
      &       / 1x, '*** Subroutine: M3DRY',
      &       / 1x, '***   Bidirectional flux for ammonia assumes ',
      &       / 1x, '***   USGS 24-category land use.',
+     &       / 1x, '***   USGS 28-category land use.',    !wx
      &       / 1x, '***   Need to update N_LUFRAC, LUF_FAC, and other places',
      &       / 1x, '***   Land use description is: ', a,
      &       / 1x, 70('*') /)
@@ -917,3 +919,4 @@ C-------------------------------------------------------------------------------
      &       / 1x, 70('*') /)
 
       END SUBROUTINE m3dry
+

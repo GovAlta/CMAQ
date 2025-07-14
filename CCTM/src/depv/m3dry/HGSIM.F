@@ -50,6 +50,7 @@ C                           exchange equations.
 C     14 Feb 2013   J. Bash Added support for the NLCD 40 (2006) land use data
 C     15 Oct 2018   D. wong Moved INIT_MEDC_1 data extraction code to centralized_io_module.F
 C     01 Feb 2019 David Wong: Implemented centralized I/O approach, removed all MY_N clauses
+C      2 Jan 2025 Wen Xu:   Added code to handle USGS28 land use category (changes noted by wx, where appropriate)
 C
 C  References:
 C
@@ -75,7 +76,9 @@ C-----------------------------------------------------------------------
 !    Shared variables
 
 !     Private variables used in this routine and
-      REAL(8), ALLOCATABLE,       PRIVATE :: HgLU_Fac(:)
+!      REAL(8), ALLOCATABLE,       PRIVATE :: HgLU_Fac(:)
+      REAL(8), ALLOCATABLE,       PRIVATE :: HGLU_FAC_USGS (:)
+      REAL(8), ALLOCATABLE,       PRIVATE :: HGLU_FAC_USGS28(:)  !wx
       REAL(8), ALLOCATABLE, SAVE, PRIVATE :: fevgrn(:,:)  ! fraction of evergreen land use
 
       REAL(8), PARAMETER, PRIVATE :: zsurf  = 1d+0 ! ocean slab depth (m)
@@ -164,10 +167,11 @@ C--------------------------------------------------------------------------
             fevgrn( :,: ) = 0.0
          END IF
 
-!         SELECT CASE( LAND_SCHEME )
-!            CASE( 'USGS24' )
-!               ALLOCATE (  Hglu_fac( n_lufrac ) )
-!               Hglu_fac = HGLU_FAC_USGS            
+         SELECT CASE( LAND_SCHEME )
+            CASE( 'USGS24' )
+               ALLOCATE (  Hglu_fac( n_lufrac ) )
+               Hglu_fac = HGLU_FAC_USGS
+!               Hglu_fac = HGLU_FAC            
          DO C = 1, NCOLS
             DO R = 1, NROWS
                DO L = 1, N_LUFRAC
@@ -177,6 +181,22 @@ C--------------------------------------------------------------------------
                   IF(CAT_LU(L) .EQ. 'MIXFOR') THEN
                      fevgrn(c,r) = fevgrn(c,r) + Grid_Data%lufrac(c,r,l)
                   End IF                                    
+               END DO
+            END DO
+         END DO
+            CASE( 'USGS28' )                 !wx
+               ALLOCATE (  Hglu_fac( n_lufrac ) )
+               Hglu_fac = HGLU_FAC_USGS28
+!               Hglu_fac = HGLU_FAC
+         DO C = 1, NCOLS
+            DO R = 1, NROWS
+               DO L = 1, N_LUFRAC
+                  IF(CAT_LU(L) .EQ. 'EVEFOR') THEN
+                     fevgrn(c,r) = fevgrn(c,r) + Grid_Data%lufrac(c,r,l)
+                  End IF
+                  IF(CAT_LU(L) .EQ. 'MIXFOR') THEN
+                     fevgrn(c,r) = fevgrn(c,r) + Grid_Data%lufrac(c,r,l)
+                  End IF
                END DO
             END DO
          END DO
@@ -208,10 +228,10 @@ C--------------------------------------------------------------------------
 !     &                              0.5*lufrac(36,c,r)
 !                  END DO
 !               END DO
-!            CASE DEFAULT
-!               xmsg = 'Land use scheme not supported'
-!               CALL M3EXIT( PNAME, JDATE, JTIME, XMSG, XSTAT2 )
-!         END SELECT
+            CASE DEFAULT
+               xmsg = 'Land use scheme not supported'
+               CALL M3EXIT( PNAME, JDATE, JTIME, XMSG, XSTAT2 )
+         END SELECT
 
 C **** Read in saved surface layer concentrations
 #ifdef mpas
@@ -925,3 +945,4 @@ C------------------------------------------------------------------------------
 
          END SUBROUTINE GET_WDEP
       END MODULE HGSIM
+

@@ -17,7 +17,6 @@
 !  subject to their copyright restrictions.                              !
 !------------------------------------------------------------------------!
 
-
 C RCS file, release, date & time of last delta, author, state, [and locker]
 C $Header: /project/work/rep/arc/CCTM/src/depv/m3dry/LSM_MOD.F,v 1.5 2012/01/19 14:23:58 yoj Exp $
 
@@ -50,6 +49,7 @@ C      June 2018  j. pleim     Removed all LSM specific data
 C      Feb. 2019  D. Wong      Implemented centralized I/O approach
 C      25 Jul 19 D.Wong        Based on logical variable WRF_V4P defined in RUNTIME_VARS to handle
 C                              various number of soil type from different WRF version
+C      20 Oct 24 W. Xu         Added code to handle USGS28 land use category (changes noted by wx, where appropriate)
 C------------------------------------------------------------------------------
        
       Implicit None
@@ -71,12 +71,18 @@ C------------------------------------------------------------------------------
       CHARACTER( 80 ), SAVE      :: LAND_SCHEME
       CHARACTER( 16 ), SAVE, ALLOCATABLE :: cat_lu( : )
       CHARACTER( 16 ), SAVE, ALLOCATABLE :: name_lu( : )
-
+!      REAL, ALLOCATABLE  :: RSMIN ( : )    ! Minimum stomatal resistance (s/m) optional
+!       REAL, ALLOCATABLE  :: Z00 ( : ) ! Momentum roughness length (cm)optional
+!       REAL, ALLOCATABLE  :: VEG0 ( : ) ! Maximum vegetation fraction (%)optional
+!       REAL, ALLOCATABLE  :: VEGMN0 ( : ) ! Minimum vegetation fraction (%)optional
+!       REAL, ALLOCATABLE  :: LAI0 ( : ) ! Maximum single sided LAI (m2/m2)
+!      REAL, ALLOCATABLE  :: LAIMN0 ( : ) ! Minimum single sided LAI (m2/m2)
 
       INTEGER, PRIVATE, PARAMETER :: n_modis   = 20
       INTEGER, PRIVATE, PARAMETER :: n_nlcd50  = 50
       INTEGER, PRIVATE, PARAMETER :: n_nlcd40  = 40
       INTEGER, PRIVATE, PARAMETER :: n_usgs    = 24
+      INTEGER, PRIVATE, PARAMETER :: n_usgs28  = 28 !wx
       INTEGER, PRIVATE            :: ALLOCSTAT
       
       TYPE lu_type
@@ -84,6 +90,12 @@ C------------------------------------------------------------------------------
          CHARACTER( 16 ) :: lu_cat
          REAL            :: LUF_FAC ! NH3 bidi stomatal gamma
          REAL            :: HGLU_FAC ! Hg bidi soil conc
+!         REAL, ALLOCATABLE :: RSMIN           ! Minimum stomatal resistance (s/m) optional
+!         REAL, ALLOCATABLE :: Z00             ! Momentum roughness length (cm)optional
+!         REAL, ALLOCATABLE :: VEG0            ! Maximum vegetation fraction (%)optional
+!         REAL, ALLOCATABLE :: VEGMN0          ! Minimum vegetation fraction (%)optional
+!         REAL, ALLOCATABLE :: LAI0            ! Maximum single sided LAI (m2/m2)
+!         REAL, ALLOCATABLE :: LAIMN0          ! Minimum single sided LAI (m2/m2)
       END TYPE lu_type
 
 
@@ -346,6 +358,43 @@ C-------------------------------------------------------------------------------
      & lu_type('USGS_BGTun', 'BARREN  ', 246.0,  18.0),  ! 23 Bare Ground Tundra
      & lu_type('USGS_SnwIc', 'SNOWICE ',   0.0,   0.0)/) ! 24 Snowfields or Glaciers
 
+!*****************************************************************************
+!  USGS28 LU characterization  --  note below may not match those for the same category in a diff
+!                                classification system.  This was done to maintain compatibility with MM5.
+!wx
+!-----------------------------------------------------------------------------  
+
+      TYPE( lu_type ), PRIVATE, PARAMETER :: USGS28( n_usgs28 ) =  (/
+!               ---Name---  -LU cat - LUF_FAC  HGLU_FAC    Cat Desc.
+     & lu_type('USGS_Urban', 'BUILT   ', 338.0, 190.0),  ! 1 Urban or Built-up Land
+     & lu_type('USGS_DrCrp', 'AG      ', 340.0,  80.0),  ! 2 Dryland Crop and Pasture
+     & lu_type('USGS_IrCrp', 'AG      ', 340.0,  32.0),  ! 3 Irr. Cropland and Pasture
+     & lu_type('USGS_MixCp', 'AG      ', 340.0,  56.0),  ! 4 Mixed Dry/Irr Crop and Past
+     & lu_type('USGS_CrGrM', 'AGMOS   ', 298.0,  50.0),  ! 5 Grassland/Cropland Mosaic
+     & lu_type('USGS_CrWdM', 'AGMOS   ', 298.0,  26.0),  ! 6 Woodland/Cropland Mosaic
+     & lu_type('USGS_GrsLd', 'GRASS   ', 247.0,  20.0),  ! 7 Grassland
+     & lu_type('USGS_ShrLd', 'SHRUB   ', 246.0, 125.0),  ! 8 Shrubland
+     & lu_type('USGS_ShrGr', 'SHRUB   ', 246.0,  73.0),  ! 9 Mixed Shrubland/Grassland
+     & lu_type('USGS_Savan', 'MIXFOR  ', 246.0,  51.0),  ! 10 Savanna
+     & lu_type('USGS_DBFst', 'DECFOR  ', 268.0,  81.0),  ! 11 Broadleaf Deciduous Forest
+     & lu_type('USGS_DNFst', 'DECFOR  ', 267.0,  81.0),  ! 12 Deciduous Coniferous Forest
+     & lu_type('USGS_EBFst', 'EVEFOR  ', 247.0, 130.0),  ! 13 Evergreen Broadleaf Forest
+     & lu_type('USGS_ENFst', 'EVEFOR  ', 246.0,  40.0),  ! 14 Evergreen Coniferous Forest
+     & lu_type('USGS_MxFst', 'MIXFOR  ', 252.0, 139.0),  ! 15 Mixed forest
+     & lu_type('USGS_Water', 'WATER   ',   0.0,   0.0),  ! 16 Water
+     & lu_type('USGS_HWtld', 'WETLAND ', 248.0, 125.0),  ! 17 Herbaceous Wetland
+     & lu_type('USGS_WWtld', 'WETLAND ', 260.0, 125.0),  ! 18 Forested Wetlands
+     & lu_type('USGS_BarSp', 'BARREN  ', 246.0,  26.0),  ! 19 Barren or Sparsely Vegetated
+     & lu_type('USGS_HrTun', 'GRASS   ', 246.0,  62.0),  ! 20 Herbaceous Tundra
+     & lu_type('USGS_WdTun', 'SHRUB   ', 246.0,  62.0),  ! 21 Shrub and Brush Tundra
+     & lu_type('USGS_MxTun', 'SHRUB   ', 246.0,  62.0),  ! 22 Mixed Tundra
+     & lu_type('USGS_BGTun', 'BARREN  ', 246.0,  18.0),  ! 23 Bare Ground Tundra
+     & lu_type('USGS_SnwIc', 'SNOWICE ',   0.0,   0.0), ! 24 Snowfields or Glaciers
+     & lu_type('USGS_nul25', 'UNASSIGN', 0.0, 0.0), ! 25 unassigned
+     & lu_type('USGS_nul26', 'UNASSIGN', 0.0, 0.0), ! 26 unassigned
+     & lu_type('USGS_nul27', 'UNASSIGN', 0.0, 0.0), ! 27 unassigned
+     & lu_type('USGS_Lakes', 'WATER ', 0.0, 0.0)/) ! 28 lakes
+
       CONTAINS                                 
          SUBROUTINE INIT_LSM( JDate, JTime )   
                                                
@@ -404,7 +453,9 @@ C-------------------------------------------------------------------------------
 
 #ifdef twoway                                  
          IF ( NUM_LAND_CAT .EQ. 24 ) THEN      
-            LAND_SCHEME = 'USGS24'             
+            LAND_SCHEME = 'USGS24'
+         ELSE IF ( NUM_LAND_CAT .EQ. 28 ) THEN
+            LAND_SCHEME = 'USGS28'         !wx
          ELSE IF ( NUM_LAND_CAT .EQ. 20 ) THEN 
             LAND_SCHEME = 'MODIS'              
          ELSE IF ( NUM_LAND_CAT .EQ. 50 ) THEN 
@@ -413,7 +464,7 @@ C-------------------------------------------------------------------------------
             LAND_SCHEME = 'NLCD40'         
          END IF                                
 #endif                                         
-!       Write( *,* ) 'Land use scheme is ', TRIM(LAND_SCHEME) 
+       Write( *,* ) 'Land use scheme is ', TRIM(LAND_SCHEME) 
                                                
          SELECT CASE( LAND_SCHEME )            
             CASE( 'USGS24' )                   
@@ -421,6 +472,12 @@ C-------------------------------------------------------------------------------
                If ( .Not. Allocated ( cat_lu ) ) Then
                   Allocate ( cat_lu   ( n_lufrac ),
      &                       name_lu  ( n_lufrac ),
+!     &                       RSMIN    ( n_lufrac ),
+!     &                       LAI0     ( n_lufrac ),
+!     &                       LAIMN0   ( n_lufrac ),
+!     &                       VEG0     ( n_lufrac ),
+!     &                       VEGMN0   ( n_lufrac ),
+!     &                       Z00      ( n_lufrac ),
      &                       LUF_FAC  ( n_lufrac ),
      &                       HGLU_FAC ( n_lufrac ), STAT = ALLOCSTAT )
                   IF ( ALLOCSTAT .NE. 0 ) THEN
@@ -430,13 +487,54 @@ C-------------------------------------------------------------------------------
                End If
                cat_lu   = USGS24%lu_cat
                name_lu  = USGS24%name
+!               RSMIN    = USGS24%RSMIN
+!               LAI0     = USGS24%LAI0
+!               LAIMN0   = USGS24%LAIMN0
+!               VEG0     = USGS24%VEG0
+!               VEGMN0   = USGS24%VEGMN0
+!               Z00      = USGS24%Z00/100.0
                LUF_FAC  = USGS24%LUF_FAC
                HGLU_FAC = USGS24%HGLU_FAC
+            CASE( 'USGS28' )  !wx
+               n_lufrac    = n_usgs28
+               If ( .Not. Allocated ( cat_lu ) ) Then
+                  Allocate ( cat_lu   ( n_lufrac ),
+     &                       name_lu  ( n_lufrac ),
+!     &                       RSMIN    ( n_lufrac ),
+!     &                       LAI0     ( n_lufrac ),
+!     &                       LAIMN0   ( n_lufrac ),
+!     &                       VEG0     ( n_lufrac ),
+!     &                       VEGMN0   ( n_lufrac ),
+!     &                       Z00      ( n_lufrac ),
+     &                       LUF_FAC  ( n_lufrac ),
+     &                       HGLU_FAC ( n_lufrac ), STAT = ALLOCSTAT )
+                  IF ( ALLOCSTAT .NE. 0 ) THEN
+                     XMSG = 'Failure allocating land use data'
+                     CALL M3EXIT( PNAME, JDATE, JTIME, XMSG, XSTAT1 )
+                  END IF
+               End If
+               cat_lu   = USGS28%lu_cat
+               name_lu  = USGS28%name
+!               RSMIN    = USGS28%RSMIN
+!               LAI0     = USGS28%LAI0
+!               LAIMN0   = USGS28%LAIMN0
+!               VEG0     = USGS28%VEG0
+!               VEGMN0   = USGS28%VEGMN0
+!               Z00      = USGS28%Z00/100.0
+               LUF_FAC  = USGS28%LUF_FAC
+               HGLU_FAC = USGS28%HGLU_FAC
+
             CASE( 'MODIS' )                    
                n_lufrac    = n_modis 
                If ( .Not. Allocated ( cat_lu ) ) Then
                   Allocate ( cat_lu   ( n_lufrac ),
      &                       name_lu  ( n_lufrac ),
+!     &                       RSMIN    ( n_lufrac ),
+!     &                       LAI0     ( n_lufrac ),
+!     &                       LAIMN0   ( n_lufrac ),
+!     &                       VEG0     ( n_lufrac ),
+!     &                       VEGMN0   ( n_lufrac ),
+!     &                       Z00      ( n_lufrac ),
      &                       LUF_FAC  ( n_lufrac ),
      &                       HGLU_FAC ( n_lufrac ), STAT = ALLOCSTAT )
                   IF ( ALLOCSTAT .NE. 0 ) THEN
@@ -446,6 +544,12 @@ C-------------------------------------------------------------------------------
                End If
                cat_lu   = MODIS%lu_cat
                name_lu  = MODIS%name
+!               RSMIN    = MODIS%RSMIN
+!               LAI0     = MODIS%LAI0
+!               LAIMN0   = MODIS%LAIMN0
+!               VEG0     = MODIS%VEG0
+!               VEGMN0   = MODIS%VEGMN0
+!               Z00      = MODIS%Z00/100.0
                LUF_FAC  = MODIS%LUF_FAC
                HGLU_FAC = MODIS%HGLU_FAC
             CASE( 'NLCD50' )               
@@ -453,6 +557,12 @@ C-------------------------------------------------------------------------------
                If ( .Not. Allocated ( cat_lu ) ) Then
                   Allocate ( cat_lu   ( n_lufrac ),
      &                       name_lu  ( n_lufrac ),
+!     &                       RSMIN    ( n_lufrac ),
+!     &                       LAI0     ( n_lufrac ),
+!     &                       LAIMN0   ( n_lufrac ),
+!     &                       VEG0     ( n_lufrac ),
+!     &                       VEGMN0   ( n_lufrac ),
+!     &                       Z00      ( n_lufrac ),
      &                       LUF_FAC  ( n_lufrac ),
      &                       HGLU_FAC ( n_lufrac ), STAT = ALLOCSTAT )
                   IF ( ALLOCSTAT .NE. 0 ) THEN
@@ -462,6 +572,12 @@ C-------------------------------------------------------------------------------
                End If
                cat_lu   = NLCD50%lu_cat
                name_lu  = NLCD50%name
+!               RSMIN    = NLCD50%RSMIN
+!               LAI0     = NLCD50%LAI0
+!               LAIMN0   = NLCD50%LAIMN0
+!               VEG0     = NLCD50%VEG0
+!               VEGMN0   = NLCD50%VEGMN0
+!               Z00      = NLCD50%Z00/100.0
                LUF_FAC  = NLCD50%LUF_FAC
                HGLU_FAC = NLCD50%HGLU_FAC
             CASE( 'NLCD40' )               
@@ -469,6 +585,12 @@ C-------------------------------------------------------------------------------
                If ( .Not. Allocated ( cat_lu ) ) Then
                   Allocate ( cat_lu   ( n_lufrac ),
      &                       name_lu  ( n_lufrac ),
+!     &                       RSMIN    ( n_lufrac ),
+!     &                       LAI0     ( n_lufrac ),
+!     &                       LAIMN0   ( n_lufrac ),
+!     &                       VEG0     ( n_lufrac ),
+!     &                       VEGMN0   ( n_lufrac ),
+!     &                       Z00      ( n_lufrac ),
      &                       LUF_FAC  ( n_lufrac ),
      &                       HGLU_FAC ( n_lufrac ), STAT = ALLOCSTAT )
                   IF ( ALLOCSTAT .NE. 0 ) THEN
@@ -478,6 +600,12 @@ C-------------------------------------------------------------------------------
                End If
                cat_lu   = NLCD40%lu_cat
                name_lu  = NLCD40%name
+!               RSMIN    = NLCD40%RSMIN
+!               LAI0     = NLCD40%LAI0
+!               LAIMN0   = NLCD40%LAIMN0
+!               VEG0     = NLCD40%VEG0
+!               VEGMN0   = NLCD40%VEGMN0
+!               Z00      = NLCD40%Z00/100.0
                LUF_FAC  = NLCD40%LUF_FAC
                HGLU_FAC = NLCD40%HGLU_FAC
             CASE DEFAULT                       
@@ -488,3 +616,4 @@ C-------------------------------------------------------------------------------
          END SUBROUTINE Init_LSM               
                                                
       END MODULE LSM_Mod                       
+
