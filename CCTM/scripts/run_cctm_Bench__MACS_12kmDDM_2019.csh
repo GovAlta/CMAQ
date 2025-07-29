@@ -47,7 +47,7 @@ echo 'Start Model Run At ' `date`
 
 #> Set the build directory (this is where the CMAQ executable
 #> is located by default).
- set BLD       = ${CMAQ_HOME}/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}
+ set BLD       = ${CMAQ_HOME}/CCTM/builds/BLD_CCTM_${VRSN}_${compilerString}
  set EXEC      = CCTM_${VRSN}.exe  
 echo ${VRSN}_${compilerString}
 #> Output Each line of Runscript to Log File
@@ -55,7 +55,7 @@ echo ${VRSN}_${compilerString}
 
 #> Set Working, Input, and Output Directories
  setenv WORKDIR ${CMAQ_HOME}/CCTM/scripts          #> Working Directory. Where the runscript is.
- setenv CMAQ_DATA /data/MACS-SMOKE_OUTPUT-12km
+ setenv CMAQ_DATA /data/CMAQ_5.5/CMAQ/data/MACS-SMOKE_OUTPUT-12km
  setenv OUTDIR  /mnt/nas/MACS_12km_2019/output_CCTM_${RUNID}_DDM  #> Output Directory
 # setenv OUTDIR  /data/MACS-SMOKE_OUTPUT-12km/output_CCTM_${RUNID}_DDM  #> Output Directory
  setenv INPDIR  ${CMAQ_DATA}            #> Input Directory
@@ -88,7 +88,7 @@ set TSTEP      = 010000            #> output time step interval (HHMMSS)
 if ( $PROC == serial ) then
    setenv NPCOL_NPROW "1 1"; set NPROCS   = 1 # single processor setting
 else
-   @ NPCOL  = 12; @ NPROW = 8
+   @ NPCOL  = 8; @ NPROW = 4
    @ NPROCS = $NPCOL * $NPROW
    setenv NPCOL_NPROW "$NPCOL $NPROW"; 
 endif
@@ -475,7 +475,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
 #  set EMISfile  = emis_mole_all_${YYYYMMDD}_12NE3_nobeis_norwc_2018gc_cb6_18j.ncf
 #  setenv GR_EMIS_013 ${EMISpath}/merged_nobeis_norwc/${EMISfile}
   set EMISfile  = MEGAN_AEP_MACS_12km-D1.CB6.${YYYYMMDD}.ncf
-  setenv GR_EMIS_013  /data/MACS-SMOKE_OUTPUT-12km/megan/${EMISfile}
+  setenv GR_EMIS_013  /data/CMAQ_5.5/CMAQ/data/MACS-SMOKE_OUTPUT-12km/megan/${EMISfile}
   setenv GR_EMIS_LAB_013 GR_EMIS_MEGAN
   setenv GR_EM_SYM_DATE_013 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
    echo $GR_EMIS_013

@@ -33,12 +33,12 @@ echo 'Start Model Run At ' `date`
  cd CCTM/scripts
 
 #> Set General Parameters for Configuring the Simulation
- set VRSN      = v55              #> Code Version
-# set VRSN      = v54
+# set VRSN      = v55_DDM3D              #> Code Version
+ set VRSN      = v55
  set PROC      = mpi               #> serial or mpi
  set MECH      = cb6r5_ae7_aq      #> Mechanism ID
 # set MECH      = cb6r3_ae7_aq      #> Mechanism ID
- set APPL      = Bench_2019_MACS_MarMay2019_test  #> Application Name (e.g. Gridname)
+ set APPL      = MACS12_20190209_20190602  #> Application Name (e.g. Gridname)
                                                        
 #> Define RUNID as any combination of parameters above or others. By default,
 #> this information will be collected into this one string, $RUNID, for easy
@@ -47,8 +47,8 @@ echo 'Start Model Run At ' `date`
 
 #> Set the build directory (this is where the CMAQ executable
 #> is located by default).
-# set BLD       = ${CMAQ_HOME}/CCTM/builds/BLD_CCTM_${VRSN}_${compilerString}
- set BLD       = /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_gcc_cb6r5_ae7_aq_m3dry
+#> AP: deposition mode and debug set manually below as don't have config parameters for these: 
+ set BLD       = ${CMAQ_HOME}/CCTM/builds/BLD_CCTM_${VRSN}_${compilerString}_${MECH}_m3dry
  set EXEC      = CCTM_${VRSN}.exe  
 echo ${VRSN}_${compilerString}
 #> Output Each line of Runscript to Log File
@@ -56,7 +56,7 @@ echo ${VRSN}_${compilerString}
 
 #> Set Working, Input, and Output Directories
  setenv WORKDIR ${CMAQ_HOME}/CCTM/scripts          #> Working Directory. Where the runscript is.
- setenv CMAQ_DATA /data/MACS-SMOKE_OUTPUT-12km
+ setenv CMAQ_DATA ${CMAQ_HOME}/data/MACS-SMOKE_OUTPUT-12km
  setenv OUTDIR  /mnt/nas/MACS_12km_2019/output_CCTM_${RUNID}_DDMoff  #> Output Directory
 # setenv OUTDIR  /data/MACS-SMOKE_OUTPUT-12km/output_CCTM_${RUNID}_DDM  #> Output Directory
  setenv INPDIR  ${CMAQ_DATA}            #> Input Directory
@@ -77,8 +77,8 @@ echo ${VRSN}_${compilerString}
 
 #> Set Start and End Days for looping
  setenv NEW_START TRUE             #> Set to FALSE for model restart
- set START_DATE = "2018-12-12"     #> beginning date (Mar 1, 2019)
- set END_DATE   = "2019-05-31"     #> ending date    (May 31, 2019)
+ set START_DATE = "2019-02-10"     #> beginning date 
+ set END_DATE   = "2019-06-02"     #> ending date  
 
 #> Set Timestepping Parameters
 set STTIME     = 000000            #> beginning GMT time (HHMMSS)
@@ -374,6 +374,19 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
     setenv CMAQ_MASKS $INPDIR/ocean/ocean_file_AEP_MACS_12km-updated.ncf
   # setenv CMAQ_MASKS $INPDIR/GRIDMASK_STATES_12NE3.nc
 
+  #> Determine Representative Emission Days
+  set EMDATES = $INPDIR/emis/emis_dates/smk_merge_dates_${YYYYMM}.txt
+  set intable = `grep "^${YYYYMMDD}" $EMDATES`
+  set Date     = `echo $intable[1] | cut -d, -f1`
+  set aveday_N = `echo $intable[2] | cut -d, -f1`
+  set aveday_Y = `echo $intable[3] | cut -d, -f1`
+  set mwdss_N  = `echo $intable[4] | cut -d, -f1`
+  set mwdss_Y  = `echo $intable[5] | cut -d, -f1`
+  set week_N   = `echo $intable[6] | cut -d, -f1`
+  set week_Y   = `echo $intable[7] | cut -d, -f1`
+  set all      = `echo $intable[8] | cut -d, -f1`
+
+ setenv EM_SYM_DATE T
   #> Gridded Emissions Files 
 #  setenv N_EMIS_GR 2
 #  set EMISfile  = emis_mole_all_${YYYYMMDD}_12NE3_nobeis_norwc_2018gc_cb6_18j.ncf
@@ -466,7 +479,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   setenv GR_EMIS_LAB_011 GR_EMIS_OTHER
   setenv GR_EM_SYM_DATE_011 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
 
-
+ls
 #  set EMISfile  = emis_mole_rwc_${YYYYMMDD}_12NE3_cmaq_cb6ae7_2018gc_cb6_18j.ncf
 #  setenv GR_EMIS_012 ${EMISpath}/rwc/${EMISfile}
   set EMISfile  = emis_l.ALL_AS+MB-noAB-CA+US-nobeis-MACS.${YYYYMMDD}.1.12km.base2019.ncf 
@@ -477,7 +490,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
 #  set EMISfile  = emis_mole_all_${YYYYMMDD}_12NE3_nobeis_norwc_2018gc_cb6_18j.ncf
 #  setenv GR_EMIS_013 ${EMISpath}/merged_nobeis_norwc/${EMISfile}
   set EMISfile  = MEGAN_AEP_MACS_12km-D1.CB6.${YYYYMMDD}.ncf
-  setenv GR_EMIS_013  /data/MACS-SMOKE_OUTPUT-12km/megan/${EMISfile}
+  setenv GR_EMIS_013  {$INPDIR}/megan/${EMISfile}
   setenv GR_EMIS_LAB_013 GR_EMIS_MEGAN
   setenv GR_EM_SYM_DATE_013 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
    echo $GR_EMIS_013
@@ -672,7 +685,8 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   setenv STK_EMIS_018 $IN_PTpath/noAB/points/US/ptfire-wild/inln_mole_ptfire-wild_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
 
 #  setenv STK_EMIS_019 $IN_PTpath/cmv_c3_12/inln_mole_cmv_c3_12_${YYYYMMDD}_${STKCASEE}.ncf
- setenv STK_EMIS_019 $IN_PTpath/noAB/points/US/pt_oilgas/inln_mole_pt_oilgas_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
+# setenv STK_EMIS_019 $IN_PTpath/noAB/points/US/pt_oilgas/inln_mole_pt_oilgas_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
+ setenv STK_EMIS_019 $IN_PTpath/noAB/points/US/pt_oilgas/inln_mole_pt_oilgas_${mwdss_Y}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
 
 #  setenv STK_EMIS_020 $IN_PTpath/cmv_c1c2_12/inln_mole_cmv_c1c2_12_${YYYYMMDD}_${STKCASEE}.ncf
     setenv STK_EMIS_020 $IN_PTpath/noAB/points/US/cmv_c3_12/inln_mole_cmv_c3_12_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
@@ -682,7 +696,8 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
 # setenv STK_EMIS_022 $IN_PTpath/cmv_c1c2_12/inln_mole_cmv_c1c2_12_${YYYYMMDD}_${STKCASEE}.ncf
     setenv STK_EMIS_022 $IN_PTpath/noAB/points/US/ptfire-px/inln_mole_ptfire-rx_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
 # setenv STK_EMIS_023 $IN_PTpath/cmv_c1c2_12/inln_mole_cmv_c1c2_12_${YYYYMMDD}_${STKCASEE}.ncf
-    setenv STK_EMIS_023 $IN_PTpath/noAB/points/US/ptnonipm/inln_mole_ptnonipm_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
+#    setenv STK_EMIS_023 $IN_PTpath/noAB/points/US/ptnonipm/inln_mole_ptnonipm_${YYYYMMDD}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
+setenv STK_EMIS_023 $IN_PTpath/noAB/points/US/ptnonipm/inln_mole_ptnonipm_${mwdss_Y}_AEP_MACS_12US_cmaq_cb6ae7_2019ge_cb6_19k.ncf
 
 
   # Label Each Emissions Stream
@@ -734,28 +749,28 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
  # setenv STK_EM_SYM_DATE_007 F
  # setenv STK_EM_SYM_DATE_008 F
 
-  setenv STK_EM_SYM_DATE_001 T
-  setenv STK_EM_SYM_DATE_002 T
-  setenv STK_EM_SYM_DATE_003 T
-  setenv STK_EM_SYM_DATE_004 T
-  setenv STK_EM_SYM_DATE_005 T
-  setenv STK_EM_SYM_DATE_006 T
-  setenv STK_EM_SYM_DATE_007 T
-  setenv STK_EM_SYM_DATE_008 T
-  setenv STK_EM_SYM_DATE_009 T
-  setenv STK_EM_SYM_DATE_010 T
-  setenv STK_EM_SYM_DATE_011 T
-  setenv STK_EM_SYM_DATE_012 T
-  setenv STK_EM_SYM_DATE_013 T
-  setenv STK_EM_SYM_DATE_014 T
-  setenv STK_EM_SYM_DATE_015 T
-  setenv STK_EM_SYM_DATE_016 T
-  setenv STK_EM_SYM_DATE_017 T
-  setenv STK_EM_SYM_DATE_018 T
+  setenv STK_EM_SYM_DATE_001 F
+  setenv STK_EM_SYM_DATE_002 F
+  setenv STK_EM_SYM_DATE_003 F
+  setenv STK_EM_SYM_DATE_004 F
+  setenv STK_EM_SYM_DATE_005 F
+  setenv STK_EM_SYM_DATE_006 F
+  setenv STK_EM_SYM_DATE_007 F
+  setenv STK_EM_SYM_DATE_008 F
+  setenv STK_EM_SYM_DATE_009 F
+  setenv STK_EM_SYM_DATE_010 F
+  setenv STK_EM_SYM_DATE_011 F
+  setenv STK_EM_SYM_DATE_012 F
+  setenv STK_EM_SYM_DATE_013 F
+  setenv STK_EM_SYM_DATE_014 F
+  setenv STK_EM_SYM_DATE_015 F
+  setenv STK_EM_SYM_DATE_016 F
+  setenv STK_EM_SYM_DATE_017 F
+  setenv STK_EM_SYM_DATE_018 F
   setenv STK_EM_SYM_DATE_019 T
-  setenv STK_EM_SYM_DATE_020 T
-  setenv STK_EM_SYM_DATE_021 T
-  setenv STK_EM_SYM_DATE_022 T
+  setenv STK_EM_SYM_DATE_020 F
+  setenv STK_EM_SYM_DATE_021 F
+  setenv STK_EM_SYM_DATE_022 F
   setenv STK_EM_SYM_DATE_023 T
 
 

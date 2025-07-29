@@ -550,8 +550,8 @@ C Calculate characteristic parameters
             else if (n_lufrac .eq. 28) Then
               Do j = 1, n_lufrac
                 If ( GRID_DATA%LUFRAC( c,r,j ) .Gt. 0.0 ) Then
-                  Aleaf =  Aleaf + Aleaf_lu(j) * GRID_DATA%LUFRAC( c,r,j )
-                  BAI =  BAI + BAI_lu(j) * GRID_DATA%LUFRAC( c,r,j )
+                  Aleaf =  Aleaf + Aleaf_lu28(j) * GRID_DATA%LUFRAC( c,r,j )
+                  BAI =  BAI + BAI_lu28(j) * GRID_DATA%LUFRAC( c,r,j )
                 endif
              enddo
             else

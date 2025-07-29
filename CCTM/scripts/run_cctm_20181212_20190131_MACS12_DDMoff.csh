@@ -33,12 +33,12 @@ echo 'Start Model Run At ' `date`
  cd CCTM/scripts
 
 #> Set General Parameters for Configuring the Simulation
- set VRSN      = v55              #> Code Version
-# set VRSN      = v54
+# set VRSN      = v55_DDM3D              #> Code Version
+ set VRSN      = v55
  set PROC      = mpi               #> serial or mpi
  set MECH      = cb6r5_ae7_aq      #> Mechanism ID
 # set MECH      = cb6r3_ae7_aq      #> Mechanism ID
- set APPL      = Bench_2019_MACS_MarMay2019_test  #> Application Name (e.g. Gridname)
+ set APPL      = MACS12_20181212_20190131  #> Application Name (e.g. Gridname)
                                                        
 #> Define RUNID as any combination of parameters above or others. By default,
 #> this information will be collected into this one string, $RUNID, for easy
@@ -47,8 +47,8 @@ echo 'Start Model Run At ' `date`
 
 #> Set the build directory (this is where the CMAQ executable
 #> is located by default).
-# set BLD       = ${CMAQ_HOME}/CCTM/builds/BLD_CCTM_${VRSN}_${compilerString}
- set BLD       = /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_gcc_cb6r5_ae7_aq_m3dry
+#> AP: deposition mode and debug set manually below as don't have config parameters for these: 
+ set BLD       = ${CMAQ_HOME}/CCTM/builds/BLD_CCTM_${VRSN}_${compilerString}_${MECH}_m3dry
  set EXEC      = CCTM_${VRSN}.exe  
 echo ${VRSN}_${compilerString}
 #> Output Each line of Runscript to Log File
@@ -56,7 +56,7 @@ echo ${VRSN}_${compilerString}
 
 #> Set Working, Input, and Output Directories
  setenv WORKDIR ${CMAQ_HOME}/CCTM/scripts          #> Working Directory. Where the runscript is.
- setenv CMAQ_DATA /data/MACS-SMOKE_OUTPUT-12km
+ setenv CMAQ_DATA ${CMAQ_HOME}/data/MACS-SMOKE_OUTPUT-12km
  setenv OUTDIR  /mnt/nas/MACS_12km_2019/output_CCTM_${RUNID}_DDMoff  #> Output Directory
 # setenv OUTDIR  /data/MACS-SMOKE_OUTPUT-12km/output_CCTM_${RUNID}_DDM  #> Output Directory
  setenv INPDIR  ${CMAQ_DATA}            #> Input Directory
@@ -77,8 +77,8 @@ echo ${VRSN}_${compilerString}
 
 #> Set Start and End Days for looping
  setenv NEW_START TRUE             #> Set to FALSE for model restart
- set START_DATE = "2018-12-12"     #> beginning date (Mar 1, 2019)
- set END_DATE   = "2019-05-31"     #> ending date    (May 31, 2019)
+ set START_DATE = "2018-12-12"     #> beginning date 
+ set END_DATE   = "2019-01-31"     #> ending date  
 
 #> Set Timestepping Parameters
 set STTIME     = 000000            #> beginning GMT time (HHMMSS)
@@ -466,7 +466,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   setenv GR_EMIS_LAB_011 GR_EMIS_OTHER
   setenv GR_EM_SYM_DATE_011 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
 
-
+ls
 #  set EMISfile  = emis_mole_rwc_${YYYYMMDD}_12NE3_cmaq_cb6ae7_2018gc_cb6_18j.ncf
 #  setenv GR_EMIS_012 ${EMISpath}/rwc/${EMISfile}
   set EMISfile  = emis_l.ALL_AS+MB-noAB-CA+US-nobeis-MACS.${YYYYMMDD}.1.12km.base2019.ncf 
@@ -477,7 +477,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
 #  set EMISfile  = emis_mole_all_${YYYYMMDD}_12NE3_nobeis_norwc_2018gc_cb6_18j.ncf
 #  setenv GR_EMIS_013 ${EMISpath}/merged_nobeis_norwc/${EMISfile}
   set EMISfile  = MEGAN_AEP_MACS_12km-D1.CB6.${YYYYMMDD}.ncf
-  setenv GR_EMIS_013  /data/MACS-SMOKE_OUTPUT-12km/megan/${EMISfile}
+  setenv GR_EMIS_013  {$INPDIR}/megan/${EMISfile}
   setenv GR_EMIS_LAB_013 GR_EMIS_MEGAN
   setenv GR_EM_SYM_DATE_013 T # To change default behaviour please see Users Guide for EMIS_SYM_DATE
    echo $GR_EMIS_013
