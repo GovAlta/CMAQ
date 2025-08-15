@@ -76,8 +76,8 @@ echo ${VRSN}_${compilerString}
 # =====================================================================
 
 #> Set Start and End Days for looping
- setenv NEW_START TRUE             #> Set to FALSE for model restart
- set START_DATE = "2019-02-10"     #> beginning date (Mar 1, 2019)
+ setenv NEW_START FALSE             #> Set to FALSE for model restart
+ set START_DATE = "2019-03-12"     #> beginning date (Mar 1, 2019)
  set END_DATE   = "2019-06-02"     #> ending date    (May 31, 2019)
 
 #> Set Timestepping Parameters

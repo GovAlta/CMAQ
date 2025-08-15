@@ -57,8 +57,8 @@ echo ${VRSN}_${compilerString}
 #> Set Working, Input, and Output Directories
  setenv WORKDIR ${CMAQ_HOME}/CCTM/scripts          #> Working Directory. Where the runscript is.
  setenv CMAQ_DATA ${CMAQ_HOME}/data/MACS-SMOKE_OUTPUT-12km
- setenv OUTDIR  /mnt/nas/MACS_12km_2019/output_CCTM_${RUNID}_DDMoff  #> Output Directory
-# setenv OUTDIR  /data/MACS-SMOKE_OUTPUT-12km/output_CCTM_${RUNID}_DDM  #> Output Directory
+# setenv OUTDIR  /mnt/nas/MACS_12km_2019/output_CCTM_${RUNID}_DDMoff  #> Output Directory
+ setenv OUTDIR  /data/MACS-CMAQ_OUTPUT-12km/output_CCTM_${RUNID}_DDM  #> Output Directory
  setenv INPDIR  ${CMAQ_DATA}            #> Input Directory
  setenv LOGDIR  ${OUTDIR}/LOGS     #> Log Directory Location
  setenv NMLpath ${BLD}             #> Location of Namelists. Common places are: 
@@ -78,7 +78,7 @@ echo ${VRSN}_${compilerString}
 #> Set Start and End Days for looping
  setenv NEW_START TRUE             #> Set to FALSE for model restart
  set START_DATE = "2019-02-10"     #> beginning date 
- set END_DATE   = "2019-06-02"     #> ending date  
+ set END_DATE   = "2019-04-15"     #> ending date  
 
 #> Set Timestepping Parameters
 set STTIME     = 000000            #> beginning GMT time (HHMMSS)
@@ -89,7 +89,7 @@ set TSTEP      = 010000            #> output time step interval (HHMMSS)
 if ( $PROC == serial ) then
    setenv NPCOL_NPROW "1 1"; set NPROCS   = 1 # single processor setting
 else
-   @ NPCOL  = 8; @ NPROW = 4
+   @ NPCOL  = 12; @ NPROW = 8
    @ NPROCS = $NPCOL * $NPROW
    setenv NPCOL_NPROW "$NPCOL $NPROW"; 
 endif
@@ -1089,6 +1089,9 @@ setenv STK_EMIS_023 $IN_PTpath/noAB/points/US/ptnonipm/inln_mole_ptnonipm_${mwds
   #> Harvest Timing Output so that it may be reported below
   set rtarray = "${rtarray} `tail -3 buff_${EXECUTION_ID}.txt | grep -Eo '[+-]?[0-9]+([.][0-9]+)?' | head -1` "
   rm -rf buff_${EXECUTION_ID}.txt
+
+#> Add a few seconds before next run starts so that the CGRID file can be written out in time to start next day
+ # sleep 30
 
   #> Abort script if abnormal termination
   if ( ! -e $OUTDIR/CCTM_CGRID_${CTM_APPL}.nc ) then

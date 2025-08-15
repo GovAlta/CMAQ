@@ -1,0 +1,515 @@
+azu-vnl0007:rank0.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank0: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank0: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank0.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank0.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank0: PSM3 can't open nic unit: 1 (err=23)
+--------------------------------------------------------------------------
+Open MPI failed an OFI Libfabric library call (fi_endpoint).  This is highly
+unusual; your job may behave unpredictably (and/or abort) after this.
+
+  Local host: azu-vnl0007
+  Location: mtl_ofi_component.c:513
+  Error: Invalid argument (22)
+--------------------------------------------------------------------------
+azu-vnl0007:rank0: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank0.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank21.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank21: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank21.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank21.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank21: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank21: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank15.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank15: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank15: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank15.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank15: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank15.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank21: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank21.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank14.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank14: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank14.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank14.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank14: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank14: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank2.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank2: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank2: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank2.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank2.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank2: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank3.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank3: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank3: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank3.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank3.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank3: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank15.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank15: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank14: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank14.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank13.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank13: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank13.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank13: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank13.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank13: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank3.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank3: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank8.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank8.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank8: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank8: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank8.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank8: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank9.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank9: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank9.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank9: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank9: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank9.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank2.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank2: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank8.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank8: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank13.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank13: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank9.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank9: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank7.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank7.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank20.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank7: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank7: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank20: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank7.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank7: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank20.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank20: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank12.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank12: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank20.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank20: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank12.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank12.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank12: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank12: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank18.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank18: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank7.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank7: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank18.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank18: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank18.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank18: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank5.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank5: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank5.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank5: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank5: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank5.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank12.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank12: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank20.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank20: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank1.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank1: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank1: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank1: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank1.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank1.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank19.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank19: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank19.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank19: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank19: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank19.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank6.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank6: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank6.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank6: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank6: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank6.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank5: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank5.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank18.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank18: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank11.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank11: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank11: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank11.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank11.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank11: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank4.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank4.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank4: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank4: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank4.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank19.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank4: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank19: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank1.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank1: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank22.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank22: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank22.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank22: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank22.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank22: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank31.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank31: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank31.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank31.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank6.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank31: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank31: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank6: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank27.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank27: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank27.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank27: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank27.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank27: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank11: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank11.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank4.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank4: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank22: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank22.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank26.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank26: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank26.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank26: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank27.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank27: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank26.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank26: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank31.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank31: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank16.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank16: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank16.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank16: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank16: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank10: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank10.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank16.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank10.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank10: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank10: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank10.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank28.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank28: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank28.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank28: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank28.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank28: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank26.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank26: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank25.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank25: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank25.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank25: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank25.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank25: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank10: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank10.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank16: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank16.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank28: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank28.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank24.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank24: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank24.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank24: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank17.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank17: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank30.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank30: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank24.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank24: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank17.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank17: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank30: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank30.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank30: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank17: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank30.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank23.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank17.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank23: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank23.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank23: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank23.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank23: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank25.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank25: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank29.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank29: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank29.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank29: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank29.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank29: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank24.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank24: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank30.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank30: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank23.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank23: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank17.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank17: PSM3 can't open nic unit: 1 (err=23)
+azu-vnl0007:rank29.CCTM_v55.exe: Failed to get eth0 (unit 1) cpu set
+azu-vnl0007:rank29: PSM3 can't open nic unit: 1 (err=23)
+             CTM_APPL  |  v55_gcc_MACS12_20190209_20190602_20190312
+#================================================================================#        
+#|                                                                              |#        
+#|               The Community Multiscale Air Quality (CMAQ) Model              |#        
+#|                                   Version 5.5                                |#        
+#|                                                                              |#        
+#|                          Built and Maintained by the                         |#        
+#|                        Office of Research and Development                    |#        
+#|                   United States Environmental Protection Agency              |#        
+#|                                                                              |#        
+#|                            https://www.epa.gov/cmaq                          |#        
+#|                                                                              |#        
+#|       Source Code:   https://www.github.com/USEPA/cmaq/tree/master           |#        
+#|       Documentation: https://www.github.com/USEPA/cmaq/tree/master/DOCS      |#        
+#|                                                                              |#        
+#|         The CMAQ Model is tested and released with cooperation from          |#        
+#|         the Community Modeling and Analysis System (CMAS) Center via         |#        
+#|         contract support. CMAS is managed by the Institute for the           |#        
+#|         Environment, University of North Carolina at Chapel Hill.            |#        
+#|         CMAS URL: (https://www.cmascenter.org)                               |#        
+#|                                                                              |#        
+#================================================================================#        
+                                                                     
+     This program uses the EPA-AREAL/MCNC-EnvPgms/BAMS/ UNC IE       
+     Models-3 I/O Applications Programming Interface, [I/O API]      
+     which is built on top of the netCDF I/O library (Copyright      
+     993, 1996 University Corporation for Atmospheric Research       
+     Unidata Program) and the PVM parallel-programming library       
+     (from Oak Ridge National Laboratory).                           
+     Copyright (C) 1992-2002 MCNC,                                   
+     (C) 1992-2018 Carlie J. Coats, Jr.,                             
+     (C) 2003-2012 Baron Advanced Meteorological Systems, LLC, and   
+     (C) 2014-2023 UNC Institute for the Environment.                
+     Released under the GNU LGPL  License, version 2.1.  See URL     
+                                                                     
+         https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html     
+                                                                     
+     for conditions of use.                                          
+                                                                     
+     ioapi-3.2: $Id: init3.F90 247 2023-03-22 15:59:19Z coats $
+     netCDF version 4.8.1 of Dec 19 2023 11:51:38 $
+      
+
+     ===========================================
+     |>---   ENVIRONMENT VARIABLE REPORT   ---<|
+     ===========================================
+
+     |> Grid and High-Level Model Parameters:
+     +=========================================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+                  BLD  |             (default)
+               OUTDIR  |  /mnt/nas/MACS_12km_2019/output_CCTM_v55_gcc_MACS12_20190209_20190602_DDMoff
+            NEW_START  |          F
+       IGNORE_SOILINP  |          F (default)
+         EXECUTION_ID  |  CMAQ_CCTMv55_sha=cb47e2f776_root_20250731_215103_422543349
+            GRID_NAME  |  AEP_MACS_12km
+            CTM_TSTEP  |       10000
+           CTM_RUNLEN  |      240000
+         CTM_PROGNAME  |  DRIVER (default)
+           CTM_STDATE  |     2019071
+           CTM_STTIME  |           0
+          NPCOL_NPROW  |  8 4
+          CTM_MAXSYNC  |         720
+          CTM_MINSYNC  |          60
+
+     |> Multiprocess control, output and error checking:
+     +====================================================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+      PRINT_PROC_TIME  |          T
+          FL_ERR_STOP  |          F
+            CTM_CKSUM  |          T
+     AVG_FILE_ENDTIME  |          F
+        AVG_CONC_SPCS  |  ALL
+            CONC_SPCS  |  O3 NO ANO3I ANO3J NO2 FORM ISOP NH3 ANH4I ANH4J ASO4I ASO4J
+      ACONC_BLEV_ELEV  |   1 1
+       CONC_BLEV_ELEV  |   1 1
+      IOAPI_LOG_WRITE  |          F
+              VERTEXT  |          F
+   VERTEXT_COORD_PATH  |  /data/CMAQ_5.5/CMAQ/CCTM/scripts/lonlat.csv
+        gc_matrix_nml  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_gcc_cb6r5_ae7_aq_m3dry/GC_cb6r5_ae7_aq.nml
+        ae_matrix_nml  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_gcc_cb6r5_ae7_aq_m3dry/AE_cb6r5_ae7_aq.nml
+        nr_matrix_nml  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_gcc_cb6r5_ae7_aq_m3dry/NR_cb6r5_ae7_aq.nml
+        tr_matrix_nml  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_gcc_cb6r5_ae7_aq_m3dry/Species_Table_TR_0.nml
+
+     |> Chemistry and Photolysis:
+     +=============================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+         CTM_PHOTDIAG  |          F
+       AEROSOL_OPTICS  |           3 (default)
+
+      --ATOL settings are in ppmV.--
+
+        GEAR_MAX_ATOL  |   0.100E-06 (default)
+        GEAR_MIN_ATOL  |   0.100E-08 (default)
+      GEAR_CONC_FLOOR  |   0.100E-11 (default)
+            GEAR_RTOL  |   0.100E-02 (default)
+              RB_RTOL  |   0.100E-02 (default)
+              RB_ATOL  |   0.100E-06 (default)
+             CTM_PVO3  |          F (default)
+
+     |> Aerosols:
+     +=============
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+        IC_AERO_M2WET  |          F
+        BC_AERO_M2WET  |          F
+        IC_AERO_M2USE  |          F
+        BC_AERO_M2USE  |          F
+         STM_SO4TRACK  |          F
+
+     |> Cloud Processes:
+     +====================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+             CLD_DIAG  |          F
+
+     |> Air-Surface Exchange Processes:
+     +===================================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+           PX_VERSION  |          F
+           CTM_ABFLUX  |          F
+           CTM_MOSAIC  |          T
+         CTM_SFC_HONO  |          T
+          CLM_VERSION  |          F
+         NOAH_VERSION  |          T
+        CTM_DEPV_FILE  |          F
+           CTM_HGBIDI  |          F
+    CTM_BIDI_FERT_NH3  |          F
+      CTM_WBDUST_BELD  |  UNKNOWN (default)
+        STAGECTRL_NML  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_gcc_cb6r5_ae7_aq_m3dry/CMAQ_Control_STAGE.nml
+        CTM_STAGE_P22  |          F
+        CTM_STAGE_E20  |          T
+        CTM_STAGE_S22  |          F
+
+     |> Transport Processes:
+     +========================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+      VDIFF_DIAG_FILE  |          F
+       SIGMA_SYNC_TOP  |   0.700E+00
+         ADV_HDIV_LIM  |   0.900E+00 (default)
+          CTM_ADV_CFL  |   0.950E+00
+                KZMIN  |          T
+             CTM_WVEL  |          T
+        CTM_GRAV_SETL  |          T
+
+     |> Emissions Parameters:
+     +=========================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+           CTM_EMLAYS  |           0 (default)
+        MISC_CTRL_NML  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_gcc_cb6r5_ae7_aq_m3dry/CMAQ_Control_Misc.nml
+       DESID_CTRL_NML  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_gcc_cb6r5_ae7_aq_m3dry/CMAQ_Control_DESID.nml
+  DESID_CHEM_CTRL_NML  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_gcc_cb6r5_ae7_aq_m3dry/CMAQ_Control_DESID_cb6r5_ae7_aq.nml
+            N_EMIS_GR  |          13
+            N_EMIS_TR  |           0 (default)
+          CTM_EMISCHK  |          F
+      CTM_BIOGEMIS_BE  |          F
+      CTM_BIOGEMIS_MG  |          F
+        USE_MEGAN_LAI  |          F (default)
+         MGN_ONLN_DEP  |          F (default)
+          BDSNP_MEGAN  |          F
+            BIOG_SPRO  |  DEFAULT (default)
+           B3GTS_DIAG  |          F
+         CTM_MGEMDIAG  |          F (default)
+       CTM_OCEAN_CHEM  |          F
+          CTM_WB_DUST  |          F
+      CTM_DUSTEM_DIAG  |          F
+         CTM_SSEMDIAG  |          F
+          CTM_LTNG_NO  |          F
+        LTNG_ASSIM_DT  |           0 (default)
+               LTNGNO  |  InLine (default)
+             USE_NLDN  |          F (default)
+             LTNGDIAG  |          F
+              MOLSNCG  |   0.350E+03 (default)
+              MOLSNIC  |   0.350E+03 (default)
+            N_EMIS_PT  |          23
+               IPVERT  |           0 (default)
+        EMIS_SYM_DATE  |          F (default)
+
+     |> Process Analysis Parameters:
+     +================================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+           CTM_PROCAN  |          F
+         PA_BCOL_ECOL  |             (default)
+         PA_BROW_EROW  |             (default)
+         PA_BLEV_ELEV  |             (default)
+           CTM_BUDGET  |  /mnt/nas/MACS_12km_2019/output_CCTM_v55_gcc_MACS12_20190209_20190602_DDMoff/CCTM_BUDGET_v55_gcc_MACS12_20190209_20190602_20190312.txt -v
+            MET_TSTEP  |       10000 (default)
+
+     MET data determined based on WRF ARW version 4.2.1
+
+
+          -=-  MPP Processor-to-Subdomain Map  -=-
+                 Number of Processors =  32
+    ____________________________________________________
+    |                                                  |
+    |  PE    #Cols    Col_Range     #Rows    Row_Range |
+    |__________________________________________________|
+    |                                                  |
+    |  0       26      1:  26         47      1:  47   |
+    |  1       26     27:  52         47      1:  47   |
+    |  2       26     53:  78         47      1:  47   |
+    |  3       26     79: 104         47      1:  47   |
+    |  4       26    105: 130         47      1:  47   |
+    |  5       26    131: 156         47      1:  47   |
+    |  6       26    157: 182         47      1:  47   |
+    |  7       25    183: 207         47      1:  47   |
+    |  8       26      1:  26         47     48:  94   |
+    |  9       26     27:  52         47     48:  94   |
+    | 10       26     53:  78         47     48:  94   |
+    | 11       26     79: 104         47     48:  94   |
+    | 12       26    105: 130         47     48:  94   |
+    | 13       26    131: 156         47     48:  94   |
+    | 14       26    157: 182         47     48:  94   |
+    | 15       25    183: 207         47     48:  94   |
+    | 16       26      1:  26         47     95: 141   |
+    | 17       26     27:  52         47     95: 141   |
+    | 18       26     53:  78         47     95: 141   |
+    | 19       26     79: 104         47     95: 141   |
+    | 20       26    105: 130         47     95: 141   |
+    | 21       26    131: 156         47     95: 141   |
+    | 22       26    157: 182         47     95: 141   |
+    | 23       25    183: 207         47     95: 141   |
+    | 24       26      1:  26         46    142: 187   |
+    | 25       26     27:  52         46    142: 187   |
+    | 26       26     53:  78         46    142: 187   |
+    | 27       26     79: 104         46    142: 187   |
+    | 28       26    105: 130         46    142: 187   |
+    | 29       26    131: 156         46    142: 187   |
+    | 30       26    157: 182         46    142: 187   |
+    | 31       25    183: 207         46    142: 187   |
+    |__________________________________________________|
+
+ Land use scheme is USGS28
+
+
+     ================================
+     |>---   TIME INTEGRATION   ---<|
+     ================================
+
+     Processing Day/Time [YYYYDDD:HHMMSS]: 2019071:000000
+       Which is Equivalent to (UTC): 0:00:00  Tuesday,  March 12, 2019
+       Time-Step Length (HHMMSS): 000500
+[azu-vnl0007:963262] 31 more processes have sent help message help-mtl-ofi.txt / OFI call fail
+[azu-vnl0007:963262] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
