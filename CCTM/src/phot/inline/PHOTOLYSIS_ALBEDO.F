@@ -512,6 +512,11 @@ C...determine average albedo and its adjustment factors for zenith angle, season
             DO V = 1, NUMB_LANDUSE
 ! set values for maximum allowed albedo; should correspond to fresh snow           
                L = ALBMAP_TO_REF( V )
+	       IF ( L .LT. 0) THEN
+		!WRITE(LOGDEV,'(A, I8, I8)')'ALBMAP TO REF **ERROR** ',V,L
+		!L = 28
+		CYCLE
+	       END IF
                DO IWAVE = 1, NWL
                   MAXIMUM_ALBEDO( IWAVE ) = MAX( MAXIMUM_ALBEDO( IWAVE ),
      &                                      ALBFAC_TO_REF( V )* SPECTRAL_ALBEDO_REF( IWAVE, L ) )
