@@ -58,7 +58,10 @@ echo ${VRSN}_${compilerString}
  setenv WORKDIR ${CMAQ_HOME}/CCTM/scripts          #> Working Directory. Where the runscript is.
  setenv CMAQ_DATA ${CMAQ_HOME}/data/MACS-SMOKE_OUTPUT-12km
 # setenv OUTDIR  /mnt/nas/MACS_12km_2019/output_CCTM_${RUNID}_DDMoff  #> Output Directory
- setenv OUTDIR  ${CMAQ_HOME}/data/MACS-CMAQ_OUTPUT-12km/output_CCTM_${RUNID}_DDM  #> Output Directory
+
+##??? setenv OUTDIR  ${CMAQ_HOME}/data/MACS-CMAQ_OUTPUT-12km/output_CCTM_${RUNID}_DDM  #> Output Directory
+ setenv OUTDIR  ${CMAQ_HOME}/data/MACS-CMAQ_OUTPUT-12km/test_DDM  #> Output Directory
+ 
  setenv INPDIR  ${CMAQ_DATA}            #> Input Directory
  setenv LOGDIR  ${OUTDIR}/LOGS     #> Log Directory Location
  setenv NMLpath ${BLD}             #> Location of Namelists. Common places are: 
@@ -84,7 +87,9 @@ echo ${VRSN}_${compilerString}
 set STTIME     = 000000            #> beginning GMT time (HHMMSS)
 set NSTEPS     = 020000            #> Set to one hour to test #> time duration (HHMMSS) for this run
 #set NSTEPS 	=240000
-set TSTEP      = 010000            #> output time step interval (HHMMSS)
+##???set TSTEP      = 010000            #> output time step interval (HHMMSS)
+set TSTEP      = 000100            #> output time step interval (HHMMSS)
+
 
 #> Horizontal domain decomposition
 if ( $PROC == serial ) then

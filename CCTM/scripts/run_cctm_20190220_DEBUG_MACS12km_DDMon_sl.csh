@@ -1,6 +1,6 @@
 #!/bin/csh -f
 
-# ===================== CCTMv5.4.X Run Script ========================= 
+# ===================== CCTMv5.5.X Run Script ========================= 
 # Usage: run.cctm >&! cctm_Bench_2018_12SE1.log &                                
 #
 # To report problems or request help with this script/program:     
@@ -58,7 +58,7 @@ echo ${VRSN}_${compilerString}
  setenv WORKDIR ${CMAQ_HOME}/CCTM/scripts          #> Working Directory. Where the runscript is.
  setenv CMAQ_DATA ${CMAQ_HOME}/data/MACS-SMOKE_OUTPUT-12km
 # setenv OUTDIR  /mnt/nas/MACS_12km_2019/output_CCTM_${RUNID}_DDMoff  #> Output Directory
- setenv OUTDIR  ${CMAQ_HOME}/data/MACS-CMAQ_OUTPUT-12km/output_CCTM_${RUNID}_DDM  #> Output Directory
+ setenv OUTDIR  /home/sheila.lucas.z/MACS-CMAQ_OUTPUT-12km/output_CCTM_${RUNID}_DDM  #> Output Directory
  setenv INPDIR  ${CMAQ_DATA}            #> Input Directory
  setenv LOGDIR  ${OUTDIR}/LOGS     #> Log Directory Location
  setenv NMLpath ${BLD}             #> Location of Namelists. Common places are: 
@@ -82,8 +82,8 @@ echo ${VRSN}_${compilerString}
 
 #> Set Timestepping Parameters
 set STTIME     = 000000            #> beginning GMT time (HHMMSS)
-set NSTEPS     = 020000            #> Set to one hour to test #> time duration (HHMMSS) for this run
-#set NSTEPS 	=240000
+#set NSTEPS     = 020000            #> Set to one hour to test #> time duration (HHMMSS) for this run
+set NSTEPS 	   = 240000
 set TSTEP      = 010000            #> output time step interval (HHMMSS)
 
 #> Horizontal domain decomposition
@@ -182,7 +182,7 @@ setenv BDSNP_MEGAN N         #> turns on BDSNP soil NO emissions [ default: N ]
 
 #> Surface Tiled Aerosol and Gaseous Exchange Options
 #> Only active if DepMod=stage at compile time
-setenv CTM_MOSAIC Y          #> Output landuse specific deposition velocities [ default: N ]
+setenv CTM_MOSAIC N          #> Output landuse specific deposition velocities [ default: N ]
 setenv CTM_STAGE_P22 N       #> Pleim et al. 2022 Aerosol deposition model [default: N]
 setenv CTM_STAGE_E20 Y      #> Emerson et al. 2020 Aerosol deposition model [default: Y]
 setenv CTM_STAGE_S22 N       #> Shu et al. 2022 (CMAQ v5.3) Aerosol deposition model [default: N]
@@ -365,7 +365,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   #> Air Quality Model Output (ELMO) Module), domain-wide budget output, and chemical
   #> family output.
 #  setenv MISC_CTRL_NML ${BLD}/CMAQ_Control_Misc_reduced_aelmo_output_2025-11-06.nml
-setenv MISC_CTRL_NML ${BLD}/CMAQ_Control_Misc.nml
+  setenv MISC_CTRL_NML ${BLD}/CMAQ_Control_Misc.nml
 
   #> The following namelist controls the mapping of meteorological land use types and the NH3 and Hg emission
   #> potentials

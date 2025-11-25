@@ -102,7 +102,7 @@
 &elmo_avrg
   Avrg_Layer_Top = 1
   Avrg_Layer_Bot = 1
-  Avrg_Vars_Nml  = 'ALL'
+  Avrg_Vars_Nml  = 'DEFAULT'
 
 ! Example for limited output
 ! Avrg_Vars_Nml = 'NO2', 'FORM', 'SO2', 'O3', 'PM25', 'PM10', 'DENS', 'NOX', 'AOD_550'
@@ -126,7 +126,7 @@
 !------------------------------------------------------------------------------!
 
 &Budget_Options
-  Budget_Diag = .TRUE.
+  Budget_Diag = .FALSE.
   BudgetVariables  = 'ALL'
 / 
 

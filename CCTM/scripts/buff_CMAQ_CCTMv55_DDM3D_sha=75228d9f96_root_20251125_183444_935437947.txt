@@ -1,0 +1,1190 @@
+azu-vnl0007:rank21.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank21: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank21: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank21.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank21.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank21: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank18.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank18: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank18: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank18.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank18.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank18: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank14.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank14: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank14: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank14.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank14.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank14: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank4.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank4.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank4.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank7.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank13.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank13.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank13.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank19.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank19.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank19.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank4: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank4: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank4: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank7: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank13: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank13: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank13: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank19: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank19: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank19: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank7.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank7: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank7: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank7.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank24.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank24: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank24: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank24.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank24: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank24.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank2.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank2: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank2: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank2.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank2.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank2: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank21: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank21.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+--------------------------------------------------------------------------
+Open MPI failed an OFI Libfabric library call (fi_endpoint).  This is highly
+unusual; your job may behave unpredictably (and/or abort) after this.
+
+  Local host: azu-vnl0007
+  Location: mtl_ofi_component.c:513
+  Error: Invalid argument (22)
+--------------------------------------------------------------------------
+azu-vnl0007:rank18: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank18.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank19: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank19.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank14.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank14: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank13.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank13: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank10.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank10.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank7.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank10: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank10: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank7: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank10.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank10: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank24.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank24: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank4.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank4: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank15.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank15: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank15: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank15: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank2: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank2.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank15.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank15.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank6.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank6: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank6: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank6.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank6.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank6: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank0.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank0: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank0: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank0.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank0.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank0: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank10: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank20: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank10.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank20.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank20: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank20.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank20: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank20.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank29.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank29: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank29: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank29.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank29.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank29: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank33.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank33: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank33: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank33.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank33.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank33: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank15: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank15.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank6: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank6.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank54.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank54: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank54.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank54: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank28.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank28.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank28.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank20.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank29.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank33.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank53.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank53.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank53.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank54.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank55.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank55.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank55.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank0.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank1.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank1.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank1.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank9.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank9.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank9.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank28: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank28: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank28: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank29: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank53: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank53: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank53: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank55: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank55: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank55: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank54: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank1: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank1: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank1: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank0: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank33: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank9: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank9: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank9: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank20: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank3.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank3: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank3: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank3.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank3.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank3: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank5.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank5: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank5: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank5.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank54.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank54: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank5: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank5.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank67.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank67.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank67.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank67: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank67: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank67: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank28.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank28: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank68.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank68: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank68: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank68: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank1: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank3: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank11: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank11: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank11: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank9: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank26: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank55: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank53: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank5: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank66: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank66: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank66: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank74: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank74: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank74: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank1.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank3.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank9.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank11.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank11.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank11.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank26.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank53.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank55.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank66.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank66.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank66.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank5.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank68.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank68.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank74.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank74.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank74.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank26.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank26: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank26: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank26.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank67.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank67: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank23.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank23: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank23: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank23.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank23: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank23.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank68.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank68: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank66.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank74.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank11.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank25.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank25.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank25.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank31.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank31.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank31.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank36.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank26.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank66: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank11: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank25: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank25: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank25: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank74: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank31: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank31: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank31: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank36: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank26: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank36: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank36: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank36.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank36.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank8.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank8: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank8: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank8: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank12: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank12: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank12: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank8.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank8.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank12.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank12.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank12.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank23: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank23.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank27.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank27: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank27: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank27.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank27: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank27.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank25.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank25: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank36.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank36: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank8: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank8.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank62.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank62.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank62.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank12.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank27.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank31.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank34.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank34.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank34.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank62: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank62: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank62: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank12: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank27: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank34: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank34: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank34: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank31: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank16.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank16.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank16.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank17.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank17.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank17.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank16: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank16: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank16: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank17: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank17: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank17: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank44.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank44.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank44: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank44: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank62: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank32: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank32: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank32: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank35: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank35: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank35: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank34: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank37: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank37: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank37: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank39: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank39: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank39: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank17: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank45: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank45: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank45: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank46: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank46: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank46: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank50: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank50: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank50: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank86: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank86: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank86: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank95: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank95: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank95: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank44: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank17.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank32.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank32.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank32.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank34.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank35.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank35.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank35.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank37.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank37.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank37.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank39.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank39.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank39.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank44.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank45.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank45.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank45.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank46.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank46.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank46.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank50.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank50.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank50.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank62.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank86.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank86.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank86.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank95.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank95.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank95.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank47.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank47: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank47: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank47.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank22.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank22: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank47: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank22: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank47.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank22.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank22.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank22: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank92.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank92: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank92.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank92: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank16.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank16: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank92.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank92: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank50.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank50: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank95.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank95: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank44.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank44: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank32.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank32: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank86.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank86: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank35.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank35: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank46.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank46: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank45.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank45: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank39.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank39: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank37.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank37: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank73.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank73.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank73.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank92.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank22.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank47.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank38.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank38.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank38.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank43.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank43.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank43.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank73: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank73: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank73: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank22: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank38: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank38: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank38: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank43: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank43: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank43: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank47: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank92: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank71.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank71: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank71.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank71.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank40.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank40.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank40.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank48.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank48.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank48.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank61.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank61.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank61.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank65.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank65.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank65.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank69.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank69.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank69.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank73.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank77.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank77.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank77.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank78.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank78.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank78.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank83.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank83.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank83.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank93.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank93.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank93.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank71: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank71: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank40: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank40: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank40: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank48: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank48: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank48: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank61: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank61: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank61: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank65: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank65: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank65: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank69: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank69: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank69: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank77: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank77: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank77: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank78: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank78: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank78: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank83: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank83: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank83: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank73: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank93: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank93: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank93: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank91.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank91: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank91.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank91: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank91.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank91: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank59.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank59: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank59: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank59.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank41.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank41: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank59.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank59: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank41: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank41.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank41.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank41: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank38.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank38: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank71.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank71: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank77.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank77: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank52.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank93.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank52: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank93: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank61.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank61: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank43.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank52.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank43: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank52: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank52: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank52.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank40.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank40: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank89.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank89: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank89.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank89: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank89.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank89: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank48.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank48: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank49.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank49: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank83: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank65: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank65.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank83.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank49.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank49: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank49.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank49: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank41: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank59: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank72: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank72: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank72: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank69: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank75: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank75: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank75: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank76: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank78: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank41.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank59.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank69.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank72.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank72.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank72.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank75.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank75.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank75.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank76.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank78.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank49: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank89: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank51: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank51: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank51: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank57: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank57: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank57: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank58: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank58: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank58: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank91: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank60: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank60: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank60: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank63: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank63: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank63: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank64: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank64: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank64: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank70: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank70: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank70: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank75: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank76: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank76: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank79: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank79: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank79: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank81: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank81: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank81: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank85: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank85: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank85: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank87: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank87: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank87: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank88: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank88: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank88: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank52: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank52.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank51.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank51.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank51.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank57.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank57.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank57.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank58.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank58.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank58.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank60.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank60.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank60.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank63.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank63.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank63.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank64.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank64.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank64.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank70.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank70.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank70.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank75.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank76.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank76.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank79.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank79.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank79.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank81.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank81.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank81.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank85.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank85.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank85.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank87.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank87.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank87.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank88.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank88.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank88.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank89.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank91.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank49.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank90.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank90: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank90.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank90: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank90.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank94.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank94: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank90: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank72.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank94.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank72: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank94: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank94: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank94.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank42.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank42: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank42: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank42: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank30: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank30.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank42.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank42.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank30.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank30: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank30: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank30.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank56.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank56.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank56.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank84.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank84.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank84.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank56: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank56: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank56: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank84: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank84: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank84: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank58.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank76.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank58: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank76: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank80.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank80: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank80.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank80: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank80.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank80: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank81.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank87.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank81: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank87: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank57.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank79.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank88.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank57: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank79: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank88: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank63.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank64.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank63: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank64: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank82.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank82: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank82.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank82: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank70.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank70: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank82.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank82: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank51.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank51: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank60.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank60: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank42: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank42.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank85.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank85: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank94.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank90.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank90: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank94: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank30: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank30.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank56.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank56: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank84: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank84.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank80.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank80: PSM3 can't open nic unit: 0 (err=23)
+azu-vnl0007:rank82.CCTM_v55_DDM3D.exe: Failed to get eth0 (unit 0) cpu set
+azu-vnl0007:rank82: PSM3 can't open nic unit: 0 (err=23)
+             CTM_APPL  |  v55_DDM3D_gcc_MACS12_2019_Feb20_DEBUG_20190220
+#================================================================================#        
+#|                                                                              |#        
+#|               The Community Multiscale Air Quality (CMAQ) Model              |#        
+#|                                   Version 5.5                                |#        
+#|                                                                              |#        
+#|                          Built and Maintained by the                         |#        
+#|                        Office of Research and Development                    |#        
+#|                   United States Environmental Protection Agency              |#        
+#|                                                                              |#        
+#|                            https://www.epa.gov/cmaq                          |#        
+#|                                                                              |#        
+#|       Source Code:   https://www.github.com/USEPA/cmaq/tree/master           |#        
+#|       Documentation: https://www.github.com/USEPA/cmaq/tree/master/DOCS      |#        
+#|                                                                              |#        
+#|         The CMAQ Model is tested and released with cooperation from          |#        
+#|         the Community Modeling and Analysis System (CMAS) Center via         |#        
+#|         contract support. CMAS is managed by the Institute for the           |#        
+#|         Environment, University of North Carolina at Chapel Hill.            |#        
+#|         CMAS URL: (https://www.cmascenter.org)                               |#        
+#|                                                                              |#        
+#================================================================================#        
+                                                                     
+     This program uses the EPA-AREAL/MCNC-EnvPgms/BAMS/ UNC IE       
+     Models-3 I/O Applications Programming Interface, [I/O API]      
+     which is built on top of the netCDF I/O library (Copyright      
+     993, 1996 University Corporation for Atmospheric Research       
+     Unidata Program) and the PVM parallel-programming library       
+     (from Oak Ridge National Laboratory).                           
+     Copyright (C) 1992-2002 MCNC,                                   
+     (C) 1992-2018 Carlie J. Coats, Jr.,                             
+     (C) 2003-2012 Baron Advanced Meteorological Systems, LLC, and   
+     (C) 2014-2023 UNC Institute for the Environment.                
+     Released under the GNU LGPL  License, version 2.1.  See URL     
+                                                                     
+         https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html     
+                                                                     
+     for conditions of use.                                          
+                                                                     
+     ioapi-3.2: $Id: init3.F90 247 2023-03-22 15:59:19Z coats $
+     netCDF version 4.8.1 of Dec 19 2023 11:51:38 $
+      
+
+     ===========================================
+     |>---   ENVIRONMENT VARIABLE REPORT   ---<|
+     ===========================================
+
+     |> Grid and High-Level Model Parameters:
+     +=========================================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+                  BLD  |             (default)
+               OUTDIR  |  /data/CMAQ_5.5/CMAQ/data/MACS-CMAQ_OUTPUT-12km/test_DDM
+            NEW_START  |          T
+       IGNORE_SOILINP  |          F (default)
+         EXECUTION_ID  |  CMAQ_CCTMv55_DDM3D_sha=75228d9f96_root_20251125_183444_935437947
+            GRID_NAME  |  AEP_MACS_12km
+            CTM_TSTEP  |         100
+           CTM_RUNLEN  |       20000
+         CTM_PROGNAME  |  DRIVER (default)
+           CTM_STDATE  |     2019051
+           CTM_STTIME  |           0
+          NPCOL_NPROW  |  8 12
+          CTM_MAXSYNC  |         720
+          CTM_MINSYNC  |          60
+
+     |> Multiprocess control, output and error checking:
+     +====================================================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+      PRINT_PROC_TIME  |          T
+          FL_ERR_STOP  |          F
+            CTM_CKSUM  |          T
+     AVG_FILE_ENDTIME  |          F
+        AVG_CONC_SPCS  |  ALL
+            CONC_SPCS  |  ALL
+      ACONC_BLEV_ELEV  |   1 1
+       CONC_BLEV_ELEV  |   1 1
+      IOAPI_LOG_WRITE  |          F
+              VERTEXT  |          F
+   VERTEXT_COORD_PATH  |  /data/CMAQ_5.5/CMAQ/CCTM/scripts/lonlat.csv
+        gc_matrix_nml  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_DDM3D_gcc_cb6r5_ae7_aq_m3dry_debug/GC_cb6r5_ae7_aq.nml
+        ae_matrix_nml  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_DDM3D_gcc_cb6r5_ae7_aq_m3dry_debug/AE_cb6r5_ae7_aq.nml
+        nr_matrix_nml  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_DDM3D_gcc_cb6r5_ae7_aq_m3dry_debug/NR_cb6r5_ae7_aq.nml
+        tr_matrix_nml  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_DDM3D_gcc_cb6r5_ae7_aq_m3dry_debug/Species_Table_TR_0.nml
+
+     |> Chemistry and Photolysis:
+     +=============================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+         CTM_PHOTDIAG  |          F
+       AEROSOL_OPTICS  |           3 (default)
+
+      --ATOL settings are in ppmV.--
+
+        GEAR_MAX_ATOL  |   0.100E-06 (default)
+        GEAR_MIN_ATOL  |   0.100E-08 (default)
+      GEAR_CONC_FLOOR  |   0.100E-11 (default)
+            GEAR_RTOL  |   0.100E-02 (default)
+              RB_RTOL  |   0.100E-02 (default)
+              RB_ATOL  |   0.100E-06 (default)
+             CTM_PVO3  |          F (default)
+
+     |> Aerosols:
+     +=============
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+        IC_AERO_M2WET  |          F
+        BC_AERO_M2WET  |          F
+        IC_AERO_M2USE  |          F
+        BC_AERO_M2USE  |          F
+         STM_SO4TRACK  |          F
+
+     |> Cloud Processes:
+     +====================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+             CLD_DIAG  |          F
+
+     |> Air-Surface Exchange Processes:
+     +===================================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+           PX_VERSION  |          F
+           CTM_ABFLUX  |          F
+           CTM_MOSAIC  |          T
+         CTM_SFC_HONO  |          T
+          CLM_VERSION  |          F
+         NOAH_VERSION  |          T
+        CTM_DEPV_FILE  |          F
+           CTM_HGBIDI  |          F
+    CTM_BIDI_FERT_NH3  |          F
+      CTM_WBDUST_BELD  |  UNKNOWN (default)
+        STAGECTRL_NML  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_DDM3D_gcc_cb6r5_ae7_aq_m3dry_debug/CMAQ_Control_STAGE.nml
+        CTM_STAGE_P22  |          F
+        CTM_STAGE_E20  |          T
+        CTM_STAGE_S22  |          F
+
+     |> Transport Processes:
+     +========================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+      VDIFF_DIAG_FILE  |          F
+       SIGMA_SYNC_TOP  |   0.700E+00
+         ADV_HDIV_LIM  |   0.900E+00 (default)
+          CTM_ADV_CFL  |   0.950E+00
+                KZMIN  |          T
+             CTM_WVEL  |          T
+        CTM_GRAV_SETL  |          T
+
+     |> Emissions Parameters:
+     +=========================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+           CTM_EMLAYS  |           0 (default)
+        MISC_CTRL_NML  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_DDM3D_gcc_cb6r5_ae7_aq_m3dry_debug/CMAQ_Control_Misc.nml
+       DESID_CTRL_NML  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_DDM3D_gcc_cb6r5_ae7_aq_m3dry_debug/CMAQ_Control_DESID.nml
+  DESID_CHEM_CTRL_NML  |  /data/CMAQ_5.5/CMAQ/CCTM/builds/BLD_CCTM_v55_DDM3D_gcc_cb6r5_ae7_aq_m3dry_debug/CMAQ_Control_DESID_cb6r5_ae7_aq.nml
+            N_EMIS_GR  |          13
+            N_EMIS_TR  |           0 (default)
+          CTM_EMISCHK  |          F
+      CTM_BIOGEMIS_BE  |          F
+      CTM_BIOGEMIS_MG  |          F
+        USE_MEGAN_LAI  |          F (default)
+         MGN_ONLN_DEP  |          F (default)
+          BDSNP_MEGAN  |          F
+            BIOG_SPRO  |  DEFAULT (default)
+           B3GTS_DIAG  |          F
+         CTM_MGEMDIAG  |          F (default)
+       CTM_OCEAN_CHEM  |          T
+          CTM_WB_DUST  |          F
+      CTM_DUSTEM_DIAG  |          F
+         CTM_SSEMDIAG  |          F
+          CTM_LTNG_NO  |          F
+        LTNG_ASSIM_DT  |           0 (default)
+               LTNGNO  |  InLine (default)
+             USE_NLDN  |          F (default)
+             LTNGDIAG  |          F
+              MOLSNCG  |   0.350E+03 (default)
+              MOLSNIC  |   0.350E+03 (default)
+            N_EMIS_PT  |          23
+               IPVERT  |           0 (default)
+        EMIS_SYM_DATE  |          F (default)
+
+     |> Process Analysis Parameters:
+     +================================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+           CTM_PROCAN  |          F
+         PA_BCOL_ECOL  |             (default)
+         PA_BROW_EROW  |             (default)
+         PA_BLEV_ELEV  |             (default)
+           CTM_BUDGET  |  /data/CMAQ_5.5/CMAQ/data/MACS-CMAQ_OUTPUT-12km/test_DDM/CCTM_BUDGET_v55_DDM3D_gcc_MACS12_2019_Feb20_DEBUG_20190220.txt -v
+            MET_TSTEP  |       10000 (default)
+
+     MET data determined based on WRF ARW version 4.2.1
+
+
+          -=-  MPP Processor-to-Subdomain Map  -=-
+                 Number of Processors =  96
+    ____________________________________________________
+    |                                                  |
+    |  PE    #Cols    Col_Range     #Rows    Row_Range |
+    |__________________________________________________|
+    |                                                  |
+    |  0       26      1:  26         16      1:  16   |
+    |  1       26     27:  52         16      1:  16   |
+    |  2       26     53:  78         16      1:  16   |
+    |  3       26     79: 104         16      1:  16   |
+    |  4       26    105: 130         16      1:  16   |
+    |  5       26    131: 156         16      1:  16   |
+    |  6       26    157: 182         16      1:  16   |
+    |  7       25    183: 207         16      1:  16   |
+    |  8       26      1:  26         16     17:  32   |
+    |  9       26     27:  52         16     17:  32   |
+    | 10       26     53:  78         16     17:  32   |
+    | 11       26     79: 104         16     17:  32   |
+    | 12       26    105: 130         16     17:  32   |
+    | 13       26    131: 156         16     17:  32   |
+    | 14       26    157: 182         16     17:  32   |
+    | 15       25    183: 207         16     17:  32   |
+    | 16       26      1:  26         16     33:  48   |
+    | 17       26     27:  52         16     33:  48   |
+    | 18       26     53:  78         16     33:  48   |
+    | 19       26     79: 104         16     33:  48   |
+    | 20       26    105: 130         16     33:  48   |
+    | 21       26    131: 156         16     33:  48   |
+    | 22       26    157: 182         16     33:  48   |
+    | 23       25    183: 207         16     33:  48   |
+    | 24       26      1:  26         16     49:  64   |
+    | 25       26     27:  52         16     49:  64   |
+    | 26       26     53:  78         16     49:  64   |
+    | 27       26     79: 104         16     49:  64   |
+    | 28       26    105: 130         16     49:  64   |
+    | 29       26    131: 156         16     49:  64   |
+    | 30       26    157: 182         16     49:  64   |
+    | 31       25    183: 207         16     49:  64   |
+    | 32       26      1:  26         16     65:  80   |
+    | 33       26     27:  52         16     65:  80   |
+    | 34       26     53:  78         16     65:  80   |
+    | 35       26     79: 104         16     65:  80   |
+    | 36       26    105: 130         16     65:  80   |
+    | 37       26    131: 156         16     65:  80   |
+    | 38       26    157: 182         16     65:  80   |
+    | 39       25    183: 207         16     65:  80   |
+    | 40       26      1:  26         16     81:  96   |
+    | 41       26     27:  52         16     81:  96   |
+    | 42       26     53:  78         16     81:  96   |
+    | 43       26     79: 104         16     81:  96   |
+    | 44       26    105: 130         16     81:  96   |
+    | 45       26    131: 156         16     81:  96   |
+    | 46       26    157: 182         16     81:  96   |
+    | 47       25    183: 207         16     81:  96   |
+    | 48       26      1:  26         16     97: 112   |
+    | 49       26     27:  52         16     97: 112   |
+    | 50       26     53:  78         16     97: 112   |
+    | 51       26     79: 104         16     97: 112   |
+    | 52       26    105: 130         16     97: 112   |
+    | 53       26    131: 156         16     97: 112   |
+    | 54       26    157: 182         16     97: 112   |
+    | 55       25    183: 207         16     97: 112   |
+    | 56       26      1:  26         15    113: 127   |
+    | 57       26     27:  52         15    113: 127   |
+    | 58       26     53:  78         15    113: 127   |
+    | 59       26     79: 104         15    113: 127   |
+    | 60       26    105: 130         15    113: 127   |
+    | 61       26    131: 156         15    113: 127   |
+    | 62       26    157: 182         15    113: 127   |
+    | 63       25    183: 207         15    113: 127   |
+    | 64       26      1:  26         15    128: 142   |
+    | 65       26     27:  52         15    128: 142   |
+    | 66       26     53:  78         15    128: 142   |
+    | 67       26     79: 104         15    128: 142   |
+    | 68       26    105: 130         15    128: 142   |
+    | 69       26    131: 156         15    128: 142   |
+    | 70       26    157: 182         15    128: 142   |
+    | 71       25    183: 207         15    128: 142   |
+    | 72       26      1:  26         15    143: 157   |
+    | 73       26     27:  52         15    143: 157   |
+    | 74       26     53:  78         15    143: 157   |
+    | 75       26     79: 104         15    143: 157   |
+    | 76       26    105: 130         15    143: 157   |
+    | 77       26    131: 156         15    143: 157   |
+    | 78       26    157: 182         15    143: 157   |
+    | 79       25    183: 207         15    143: 157   |
+    | 80       26      1:  26         15    158: 172   |
+    | 81       26     27:  52         15    158: 172   |
+    | 82       26     53:  78         15    158: 172   |
+    | 83       26     79: 104         15    158: 172   |
+    | 84       26    105: 130         15    158: 172   |
+    | 85       26    131: 156         15    158: 172   |
+    | 86       26    157: 182         15    158: 172   |
+    | 87       25    183: 207         15    158: 172   |
+    | 88       26      1:  26         15    173: 187   |
+    | 89       26     27:  52         15    173: 187   |
+    | 90       26     53:  78         15    173: 187   |
+    | 91       26     79: 104         15    173: 187   |
+    | 92       26    105: 130         15    173: 187   |
+    | 93       26    131: 156         15    173: 187   |
+    | 94       26    157: 182         15    173: 187   |
+    | 95       25    183: 207         15    173: 187   |
+    |__________________________________________________|
+
+ Land use scheme is USGS28
+
+
+     ================================
+     |>---   TIME INTEGRATION   ---<|
+     ================================
+
+     Processing Day/Time [YYYYDDD:HHMMSS]: 2019051:000000
+       Which is Equivalent to (UTC): 0:00:00  Wednesday,  Feb. 20, 2019
+       Time-Step Length (HHMMSS): 000100
+[azu-vnl0007:1553656] 95 more processes have sent help message help-mtl-ofi.txt / OFI call fail
+[azu-vnl0007:1553656] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+                 VDIFF completed...      13.3873 seconds
+                COUPLE completed...       0.7545 seconds
+                  HADV completed...       6.7320 seconds
+                  ZADV completed...       2.8805 seconds
+                 HDIFF completed...       2.3376 seconds
+              DECOUPLE completed...       0.3670 seconds
+                  PHOT completed...       2.2937 seconds
+               CLDPROC completed...       3.0809 seconds
+                  CHEM completed...      37.0771 seconds
+                  AERO completed...       5.0377 seconds
+            Master Time Step
+            Processing completed...      73.9489 seconds
+
+      =--> Data Output completed...       2.1514 seconds
+
+     Processing Day/Time [YYYYDDD:HHMMSS]: 2019051:000100
+       Which is Equivalent to (UTC): 0:01:00  Wednesday,  Feb. 20, 2019
+       Time-Step Length (HHMMSS): 000100
+                 VDIFF completed...      11.6449 seconds
+                COUPLE completed...       0.7532 seconds
+                  HADV completed...       6.8620 seconds
+                  ZADV completed...       2.8067 seconds
+                 HDIFF completed...       2.3463 seconds
+              DECOUPLE completed...       0.3661 seconds
+                  PHOT completed...       1.9523 seconds
+               CLDPROC completed...       3.0641 seconds
+                  CHEM completed...      35.7392 seconds
+                  AERO completed...       5.0088 seconds
+            Master Time Step
+            Processing completed...      70.5440 seconds
+
+      =--> Data Output completed...       2.8877 seconds
+
+     Processing Day/Time [YYYYDDD:HHMMSS]: 2019051:000200
+       Which is Equivalent to (UTC): 0:02:00  Wednesday,  Feb. 20, 2019
+       Time-Step Length (HHMMSS): 000100
+                 VDIFF completed...      11.6691 seconds
+                COUPLE completed...       0.7553 seconds
+                  HADV completed...       6.8077 seconds
+                  ZADV completed...       2.8182 seconds
+                 HDIFF completed...       2.3793 seconds
+              DECOUPLE completed...       0.3648 seconds
+                  PHOT completed...       1.9481 seconds
+               CLDPROC completed...       3.1047 seconds
+                  CHEM completed...      35.2739 seconds
+                  AERO completed...       5.0350 seconds
+            Master Time Step
+            Processing completed...      70.1567 seconds
+
+      =--> Data Output completed...       2.7924 seconds
+
+     Processing Day/Time [YYYYDDD:HHMMSS]: 2019051:000300
+       Which is Equivalent to (UTC): 0:03:00  Wednesday,  Feb. 20, 2019
+       Time-Step Length (HHMMSS): 000100
+                 VDIFF completed...      11.4617 seconds
+                COUPLE completed...       0.7533 seconds
+                  HADV completed...       6.8805 seconds
+                  ZADV completed...       2.8120 seconds
+                 HDIFF completed...       2.3559 seconds
+              DECOUPLE completed...       0.3664 seconds
+                  PHOT completed...       1.9516 seconds
+               CLDPROC completed...       3.1062 seconds
+                  CHEM completed...      35.0878 seconds
+                  AERO completed...       4.8386 seconds
+            Master Time Step
+            Processing completed...      69.6145 seconds
+
+      =--> Data Output completed...       3.3469 seconds
+
+     Processing Day/Time [YYYYDDD:HHMMSS]: 2019051:000400
+       Which is Equivalent to (UTC): 0:04:00  Wednesday,  Feb. 20, 2019
+       Time-Step Length (HHMMSS): 000100
+                 VDIFF completed...      11.6332 seconds
+                COUPLE completed...       0.7425 seconds
+                  HADV completed...       6.7450 seconds
+                  ZADV completed...       2.8213 seconds
+                 HDIFF completed...       2.4028 seconds
+              DECOUPLE completed...       0.3665 seconds
+                  PHOT completed...       1.9481 seconds
+               CLDPROC completed...       3.1438 seconds
+                  CHEM completed...      34.7434 seconds
+                  AERO completed...       5.0191 seconds
+            Master Time Step
+            Processing completed...      69.5663 seconds
+
+      =--> Data Output completed...       3.0443 seconds
+
+     Processing Day/Time [YYYYDDD:HHMMSS]: 2019051:000500
+       Which is Equivalent to (UTC): 0:05:00  Wednesday,  Feb. 20, 2019
+       Time-Step Length (HHMMSS): 000100
+                 VDIFF completed...      11.5548 seconds
+                COUPLE completed...       0.7529 seconds
+                  HADV completed...       6.8535 seconds
+                  ZADV completed...       2.8024 seconds
+                 HDIFF completed...       2.3836 seconds
+              DECOUPLE completed...       0.3647 seconds
+                  PHOT completed...       1.9522 seconds
+               CLDPROC completed...       3.0052 seconds
+                  CHEM completed...      34.9982 seconds

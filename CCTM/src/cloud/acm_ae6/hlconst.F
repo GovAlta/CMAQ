@@ -520,7 +520,11 @@ C...compute the effective Henry's law constants
           CALL M3EXIT ( PNAME, 0, 0, XMSG, XSTAT2 )
         END IF
 
-        HPLUSI = 1.0 / HPLUS
+c        HPLUSI = 1.0 / HPLUS
+cBWZ 
+cBWZ is the mol/L of hydonium ion concentration
+cBWZ typical range for pH 2 to 7, so HPLUS=10**-2 to 10**-7
+        HPLUSI = 1.0/ MAX(1E-8,HPLUS)
         HPLUS2I = HPLUSI * HPLUSI
 
 C...assign a value for clminus.  use 2.0 mM based on Lin and Pehkonene, 1998, JGR
